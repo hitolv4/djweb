@@ -1,0 +1,46 @@
+/**sucursal**/
+
+.gerencias {
+	width: 100%; 
+	height: 500px; 
+	position:static; 
+	font-family: Montserrat;
+
+}
+.txtge{ 
+	height: 65%; 
+	margin-left: -15%;
+	margin-right: 100px; 
+	margin-top: 4%; 
+	color: #000; 
+	font-size: 14px;
+}
+.fotoge{
+	width:25%; 
+	height: 100%;
+	margin-left:20%; 
+	margin-top: 1%;
+
+}
+
+.boton{
+	width: 30%; 
+	height: 13%; 
+	text-align: center; 
+	cursor: pointer; 
+	background:#1070B7; 
+	padding: 5px; 
+	margin-top:2%; 
+	align-items: center;
+	border-radius: 10px;
+	color: #fff;
+}
+
+  
+.boton:hover{
+  background-image: -webkit-linear-gradient(top, #1070b7, #00345a);
+  background-image: -moz-linear-gradient(top, #1070b7, #00345a);
+  background-image: -ms-linear-gradient(top, #1070b7, #00345a);
+  background-image: -o-linear-gradient(top, #1070b7, #00345a);
+  background-image: linear-gradient(top, #1070b7, #00345a);
+            }

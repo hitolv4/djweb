@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'hitolv4.pythonanywhere.com',
     '127.0.0.1',
-     ]
+]
 
 
 # Application definition
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'noticias',
+    'smart_selects',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -121,5 +124,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+
+
+# Media files ( imagenes y documentos subidos por el usuario)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
+# tinyMCE configuracion
+TINYMCE_DEFAULT_CONFIG = {
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': 'link image preview codesample contextmenu table code lists advlist',
+    'toolbar1': 'bold italic underline | alignleft alignjustify ''| bullist | preview',
+    'contextmenu': 'formats | link image',
+    'menubar': False,
+    'inline': False,
+    'statusbar': True,
+    'height': 360,
+}
+
+TINYMCE_JS_URL = '//cdn.tinymce.com/4/tinymce.min.js'

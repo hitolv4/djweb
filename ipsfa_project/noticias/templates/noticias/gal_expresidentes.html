@@ -1,0 +1,47 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+{% block expresidentes %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/galeria/galeria.css' %}">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+    //FANCYBOX
+    //https://github.com/fancyapps/fancyBox
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});
+   
+  
+</script>
+<div class="shell">
+	<div class="row" id="galex">
+		<div class='list-group gallery'>
+			{% for imagen in expre %}
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="{% url 'lista_publicaciones'%}media/{{ imagen.imagen}}">
+                    <img class="img-responsive" alt="" src="{% url 'lista_publicaciones'%}media/{{ imagen.imagen}}" />
+               
+                    <div class='text'>
+                    <ul>
+                <li>{{imagen.nombre}}</li>
+                <li><p>{{imagen.inicio}} <br> al <br>
+                {{imagen.fin}} </p>
+                </li>
+            		</ul>
+                    </div> <!-- text-right / end -->
+                
+                </a>
+            </div> <!-- col-6 / end -->
+
+        {% endfor %}    
+
+
+  					
+        </div> <!-- list-group / end -->
+	</div> <!-- row / end -->
+</div> <!-- container / end -->     
+{% endblock expresidentes %}

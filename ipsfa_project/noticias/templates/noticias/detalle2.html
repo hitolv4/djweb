@@ -1,0 +1,47 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+
+
+
+{% block detallege %}
+
+
+
+	<div class="gerencia" >			
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                <div class="fotoge">
+                    <img src="{% url 'lista_publicaciones' %}media/{{gere.gerente.imagen}}" class="img-circle">                 
+                </div>
+                </div>
+                <div class="col-md-8">
+                <div class="txtge">
+                    <strong style="color: #1070BA; font-size: 16px;">{{gere.gerencia}}</strong>
+                    <br>
+                    {{ gere.gerente.rango}} {{gere.gerente}} 
+                    <br>
+                    <strong>Correo Instirucional: </strong>{{gere.correo}}
+                    <br>
+                    <strong>Teléfono de Contacto: </strong>{{gere.telefono}}
+                    <br>
+                    <strong>Dirección: </strong>{{gere.direccion}}
+                    <br>
+                    <strong>Horario: </strong>{{gere.horario}}
+                </div>
+                </div>
+
+                <div class="col-md-12" id="detalle2">
+                <div class="detalle2">
+                    {{ gere.texto|safe }}
+                </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock detallege %}
+

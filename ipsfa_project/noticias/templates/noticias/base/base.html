@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>IPSFA</title>
+
+		<!-- Bootstrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    
+  
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/noticias.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sliderengine/amazingslider-1.css' %}">
+ 	<link rel="stylesheet" type="text/css" href="{% static 'css/slider/style.css' %}">
+ 	<link rel="stylesheet" type="text/css" href="{% static 'css/particulas/style.css' %}">
+ 	<link rel="stylesheet" type="text/css" href="{% static 'css/emergentes/demo-styles.css' %}">
+ 	<link rel="stylesheet" type="text/css" href="{% static 'css/emergentes/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/lineademando/default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lineademando/example-2.css' %}">
+    <link href="{% static 'css/gerencias/sucursales.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/gerencias/gerencias.css' %}" rel="stylesheet" type="text/css">
+    
+    <!-- Tipografia -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylessheet"
+    type="text/css">
+
+    <!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+
+        
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "69e8c0ef-edd8-467f-b73e-8862ac2f5d6e", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+		<!--JS-->
+		
+
+	</head>
+		<body>
+		<main>
+		<!--shell -->
+		<div class="shell">
+		<!--Banner-->
+		<img class="banner" src="{% static "image/base/header.png" %}">
+		
+		<!--menu-->
+		{% include "noticias/base/menu.html" %}
+
+		
+
+  		<div class="container-fluid">
+        
+        <!--pagina principal-->       
+        <div class="row">
+            <div class="col-md-4">
+                {% block ilinea %}
+                {% endblock ilinea %}
+            </div>
+            <div class="col-md-8">
+                {% block carousel %}
+                {% endblock carousel %}
+            </div>
+            <div class="col-md-12">
+                {% block linea %}
+                {% endblock linea %}
+            </div>
+            </div>
+        
+            
+            <div class="row">
+            <div class="col-md-4">
+                {% block content %}
+                {% endblock content %}
+            </div>
+            <div class="col-md-4">
+                {% block uh %}
+                {% endblock uh %}
+            </div>
+            <div class="col-md-4">
+                {% block video %}
+                {% endblock video %}
+            </div>
+            </div>
+        <!-- fin de pagina principal -->
+        <!-- detalle de noticia -->
+        		<div class="row">
+        			<div class="col-md-12" >
+        				{% block detalle %}			
+        				{% endblock detalle %}
+        			</div>
+        		</div>
+   			<!-- fin de detalle de noticia -->
+   			<!-- galeria de expresidentes -->
+
+   				<div class="row" >
+   					<div class="col-md-12">
+   						{% block expresidentes %}   							
+   						{% endblock expresidentes %}
+   					</div>
+        	    </div>
+
+    		<!-- fin de galeria de expresidentes-->
+    		<!-- linea de mando -->
+
+    			<div class="row">
+    			    <div class="col-md-12">
+    				{% block linmando %}    					
+    				{% endblock linmando %}
+    			    </div>
+    		    </div>
+
+    		<!-- fin de linea de mando -->
+            <!-- sucursales -->
+
+                <div class="row">
+                    <div class"col-md-12">
+                        {% block sucursal %}
+                            
+                        {% endblock sucursal %}
+                    </div>
+                </div>
+
+            <!-- fin de sucursales-->
+            <!-- gerencias -->
+
+                <div class="row">
+                    <div class"col-md-12">
+                        {% block gerencia %}
+                            
+                        {% endblock gerencia %}
+                    </div>
+                </div>
+
+            <!-- fin de gerencias-->
+
+               <!-- detalle de gerencias -->
+
+                <div class="row">
+                    <div class"col-md-12">
+                        {% block detallege %}
+                            
+                        {% endblock detallege %}
+                    </div>
+                </div>
+
+            <!-- fin detalle de gerencias-->
+            <!-- Beneficios -->
+                <div class="row">
+                    <div class"col-md-12">
+                        {% block beneficios %}
+                            
+                        {% endblock beneficios %}
+                    </div>
+                </div>
+            <!-- fin de Beneficios -->    		
+        </div>
+        {% if  posts and uhs and slides and imagenes %}
+
+        <!-- inner-footer -->
+    {% include "noticias/base/inner-footer.html" %}
+        <!--social-inner -->
+     {% include "noticias/base/social-inner.html" %}
+     
+    {% endif %}
+    <!--footer-->
+      {% include "noticias/base/footer.html" %}
+        </div>
+		</main>
+		</body>
+
+</html>
+    

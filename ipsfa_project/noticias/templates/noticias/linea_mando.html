@@ -1,0 +1,34 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+
+
+{% block linmando %}
+
+
+
+	<h1>LINEA DE MANDO</h1>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="line" >
+    
+    {% for autoridad in linmando %}      
+    <div class="container{{autoridad.id}}">
+      <div class="view">  
+          <img src="{% url 'lista_publicaciones'%}media/{{autoridad.imagen}}" >  
+          <div class="mask"></div>
+          <div class="content">
+            <h2>{{autoridad.nombre}}</h2>  
+            <p>{{autoridad.cargo}}</p>  
+          </div>
+      </div>           
+  	</div>
+    {% endfor %}
+  </div>
+
+
+
+{% endblock linmando %}

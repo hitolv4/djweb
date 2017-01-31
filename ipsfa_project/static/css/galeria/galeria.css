@@ -1,0 +1,61 @@
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img
+{
+    display: block;
+    width: 160px;
+    height: 177px;
+    position: relative;
+}
+
+
+.col-lg-3 
+{
+    width: 160px;
+    padding left: 5px;
+}
+
+
+#galex{
+	    width: 100%;
+    max-width: 990px;
+    margin-left: 10px;
+}
+
+.text {
+    text-align:center;
+        color: transparent;
+    font-size: 11px;
+    font-family:Montserrat, Georgia, Arial, sans-serif;
+    line-height:15px;
+    font-weight:bolder;
+
+}
+
+.text ul:hover {	
+color:#fff; 
+background: rgba(0, 0, 0, 0.5);
+margin-top: 10px;
+margin-bottom: 5px;
+}
+
+.text p {
+	font-size: 9px;
+
+}
+.text ul {
+	position: absolute;
+	padding-left: 0px;
+	top:95px;
+	width: 120px;
+	height: 78px;
+}
+
+.text li {
+	list-style: none;
+}
+

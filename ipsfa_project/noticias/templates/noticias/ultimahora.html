@@ -1,0 +1,15 @@
+{% extends "noticias/base/base.html" %}
+
+{% block  uh %}
+	{% for uh in uh %}
+  <div class="ultimahora">
+  	<div class="date">
+  	{{ uh.fecha_publicacion }}
+    </div>
+    <h1><a href="{% url 'detalle' pk=uh.pk %}">{{ uh.titulo }}</a></h1>
+   	<p>{{ uh.texto|linebreaksbr }}</p>
+  </div>
+ {% endfor %}
+{% endblock uh %}
+
+ 

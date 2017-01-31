@@ -1,15 +1,129 @@
-{% extends "noticias/base.html" %}
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
 
-{% block content %}
+
+<!-- Pagina principal -->
+<!--IPSFA en Linea -->
+{% block ilinea %}
+<div id="particles-js"></div>
+<div class="ipsfa-net">  
+    <div class="ingresa">
+        <a href='http://www.ipsfa.mil.ve/ipsfa.net/accounts.ipsfa.linea/accounts?resf=ini-acc' target="_blank" style="color:#ffffff">
+            <p align="center" style="font-size:12px;"><strong>INGRESA</strong></p> 
+        </a>
+    </div>
+</div>
+
+<script src="{% static 'js/particulas/particles.min.js' %}"></script>
+<script src="{% static 'js/particulas/app.js' %}"></script>	
+
+{% endblock ilinea %}
+
+
+<!-- Carousel de Imagenes -->
+{% block carousel %}
+
+<script  src="{% static 'js/slider/jquery.js' %}"></script>
+
+<body style="background-color:#f0f0f0;margin:auto">
+	<div id="wowslider-container1">
+	<div class="ws_images"><ul>
+	    {% for imagen in imagenes %}
+  							
+			<li><img src="media/{{ imagen.imagen }}"/></li>
+  			
+ 			{% endfor %} -->
+
+	</ul></div>
+	<div class="ws_bullets"><div>
+		  {% for imagen in imagenes %}
+
+  		<a href="#" title="{{ imagen.titulo}}"><span>{{imagen.id}}</span></a>	
+ 			{% endfor %}
+
+	</div></div>
+	<div class="ws_shadow"></div>
+	</div>
+<script  src="{% static 'js/slider/wowslider.js' %}"></script>
+<script  src="{% static 'js/slider/script.js' %}"></script>	
+{% endblock carousel %}
+<!--barra -->
+{% block linea %}
+	<div class="linea"></div>
+{% endblock linea %}
+
+<!--Noticias Salade prensa-->
+ {% block content %}
+ <div align="center">
+ 	<img class="salaprensa" src="{% static "image/base/SalaPrensa-min.png" %}">
+ </div>
+ <ul>
 	{% for post in posts %}
   <div class="post">
-  	<div class="date">
-  	{{ post.fecha_publicacion }}
-    </div>
-    <h1><a href="{% url 'detalle' pk=post.pk %}">{{ post.titulo }}</a></h1>
-   	<p>{{ post.texto|linebreaksbr }}</p>
+    <li><b><a href="{% url 'detalle' pk=post.pk %}">{{ post.titulo }}</a></b></li>
   </div>
  {% endfor %}
-{% endblock content %}
+ </ul>
+ {% endblock content %}
 
+<!--UltimaHora-->
+
+ {% block  uh %}
+ 
+  <div align="center">
+ 	<img class="salaprensa" src="{% static "image/base/interesAfiliado-min.png" %}">
+ </div>
+ <ul>
+	{% for uh in uhs %}
+		
+		{% if uh.archivo %}
+
+  	<div class="uh">
+    <li><b><a href="{% url 'lista_publicaciones'%}media/{{ uh.archivo }}">{{ uh.titulo }}</a></b></li>
+    {% else %}
+  	<div class="uh">
+    <li><b><a href="{% url 'lista_publicaciones'%}media/{{ uh.imagen }}" >{{ uh.titulo }}</a></b></li>
+
+ 		<script>
+		var positionLeft = (screen.width)-500;
+		function notificacion(){
+		var imagen ="{{ uh.imagen }}";
+	  var alto;
+	  var ancho;
+
+
+	  alto = 625;
+	  ancho = 625;
+	  estilo = "toolbar=no, location=no, status=no, titlebar=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, left=-1" + positionLeft + ", top=80, width=" + ancho + ", height=" + alto;
+	  alerta = alert("Your current domain is: "+imagen);
+	  ventana = window.open("{% url 'lista_publicaciones'%}media/"+imagen, "", estilo);
+
+	}
+		</script>    
+ 	{% endif %}
+  </div>
+
+ {% endfor %}
+ </ul>
+
+{% endblock uh %}
+
+<!-- Youtube Carousel -->
+{% block  video %}
+    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:261px;margin:0px auto 0px;">
+        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                {% for slide in slides %}
+  							<div class="slide">
+								<li><img src="media/{{ slide.imagen }}"/>
+								<video preload="none" src="{{ slide.url }}" ></video>
+								</li>
+  							</div>
+ 								{% endfor %}
+            </ul>
+        </div>
+    </div>
+<script  src="{% static 'js/sliderengine/amazingslider.js' %}"></script>
+<script src="{% static 'js/sliderengine/initslider-1.js' %}"></script>
+{% endblock video %}
    

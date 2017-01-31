@@ -1,0 +1,37 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+
+{% block beneficios %}
+
+
+
+<script type="text/javascript">
+jQuery(function () {
+    jQuery('#myTab a').on('click', function() {
+        $(this).tab('show');
+    });
+})
+</script>
+    <div class="Beneficios">
+
+  <div class="container-fluid">
+<div class="col-md-4">
+                <ul class="nav nav-tabs tabs-left" id="myTabs">
+                {% for item in afi  %}    
+                <li><a href="#{{item.beneficio}}" data-toggle="tab">{{item.beneficio}}</a></li>
+                {% endfor %}     
+                </ul>    
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content">
+                    {% for item in afi %}                                            
+                        <div class="tab-pane" id="{{item.beneficio}}">{{item.texto|safe}}</div>
+                    {% endfor %}    
+                    </div>
+                </div>
+</div>
+        
+
+
+{% endblock beneficios %}
+

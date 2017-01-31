@@ -1,0 +1,97 @@
+{% load staticfiles %}
+
+<style type="text/css">
+a {
+    color:  #968989;
+    text-decoration: none;
+}
+
+.socials {width: 100%;}
+
+.socials  {
+    color: #968989; 
+    font-size: 16px; 
+    line-height: 49px;  
+    padding-bottom: 0; 
+    font-family: 'Ubuntu',sans-serif; 
+    font-weight: 500;
+
+    }
+
+
+.socials .socials-inner {
+        width: 100%;
+        height: auto;
+        background-image: linear-gradient(to bottom,#cececf 0,#fffcfc 100%);
+        text-align: center;
+        border-top: 1px solid #989898;
+
+    }
+.socials .socials-inner figure.social {
+            display: inline-block;
+            margin: 0px 5px;
+        }
+.socials .socials-inner figure.social img {
+                opacity: .7;
+                -webkit-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                -o-filter: grayscale(100%);
+                filter: grayscale(100%);
+                -o-transition: .3s;
+                -ms-transition: .3s;
+                -moz-transition: .3s;
+                -webkit-transition: .3s;
+                transition: .3s;
+            }
+
+.socials .socials-inner figure.social img:hover {
+                opacity: 1;
+                -webkit-filter: grayscale(0%);
+                -moz-filter: grayscale(0%);
+                -ms-filter: grayscale(0%);
+                -o-filter: grayscale(0%);
+                filter: grayscale(0%);
+            }
+
+.socials .socials-inner figure.social a { 
+    color: #7c7c7c; 
+    text-decoration: none; 
+    display: block;
+    padding-right: 5px; 
+    padding-left: 20px; 
+    position: relative;  
+}
+
+</style>
+
+
+<div class="socials">
+    <div class="socials-inner">
+
+                <figure class="social">
+                    <a href="https://www.facebook.com/institucion.ipsfa" target="_blank">
+                    <img src="{% static "image/base/RedesSociales/facebook-min.png" %}" alt="facebook">   Facebook</a>
+                </figure>
+                <figure class="social">
+                    <a href="https://twitter.com/IPSFASOCIALISTA" target="_blank">
+                        <img src="{% static "image/base/RedesSociales/twitter-min.png" %}" alt="twitter">   Twitter</a>   
+                    </a>
+                </figure>
+                <figure class="social">
+                    <a href="https://www.instagram.com/ipsfa/" target="_blank">
+                        <img src="{% static "image/base/RedesSociales/instagram-min.png" %}" alt="instagram">   Instagram</a>
+                    </a>
+                </figure>
+                <figure class="social">
+                    <a href="https://www.youtube.com/channel/UCJMsD0zQhMEItzODSHF7q0A" target="_blank">
+                        <img src="{% static "image/base/RedesSociales/youtube-min.png" %}" alt="youtube">   Youtube</a>
+                    </a>
+                </figure>
+                <figure class="social">
+                    <a href="https://correo.ipsfa.gob.ve/" target="_blank">
+                        <img src="{% static "image/base/RedesSociales/zimbra-min.png" %}" alt="zimbra">   Zimbra</a>
+                    </a>
+                
+            </div>
+        </div>

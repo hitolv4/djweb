@@ -1,0 +1,180 @@
+<!-- css y js -->
+<style>
+
+/* navbar */
+
+nav.navbar {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  background: #00345a;
+	position: relative;
+  z-index: 1;
+ }
+
+ 
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff; 
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+	background: #1070b7;
+	display: block;
+
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #e8e8e8;
+    background-color: #1070b7;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a{
+  background-image: linear-gradient(to bottom,#1070b7 0,#1070b7 100%);
+  color: #fff;
+  }
+
+/* dropdown */
+
+
+
+.dropdown-menu>li>a {
+    background: #00345a;
+    color: #fff;
+    font-size: 16px	
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+	background: #1070b7;
+
+}
+
+
+
+.dropdown-submenu {
+    position: relative;
+    background: #00345a;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    background: #00345a;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+</style>
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+
+</script>
+<!-- Navbar --> 
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">IPSFA</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Inicio</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Institución
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        	<li class="dropdown-submenu">
+        		<a class="test" href="#">Aspectos Legales<span class="caret"></span></a>
+        		<ul class="dropdown-menu">
+           		<li><a href="#">Consejo Directivo</a></li>
+          		<li><a href="#">Marco Juridico</a></li>       			
+        		</ul>
+        	</li>
+          <li><a href="#">Contrataciones Publicas</a></li>
+          <li><a href="#">Efemerides</a></li>
+          <li><a href="#">Galeria de Ex-Presidentes</a></li>
+          <li class="dropdown-submenu">
+          	<a  class="test"href="#">Organización <span class="caret"></span></a>
+          	<ul class="dropdown-menu">
+          		<li><a href="#">Quienes Somos</a></li>
+          		<li><a href="#">Heraldia del Escudo</a></li>
+          		<li><a href="#">Himno</a></li>
+          		<li><a href="#">Linea de Mando</a></li>
+          		<li><a href="#">Plan de Transformacion</a></li>          		
+          	</ul>
+          </li>
+          <li><a href="#">Sucursales</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerencias
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Atencion al Afiliado</a></li>
+          <li><a href="#">Filiales y Unds de Negocios</a></li>
+          <li><a href="#">Gerencias Internas</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Beneficiarios
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Afiliación</a></li>
+          <li><a href="#">Bienestar y Seguridad Social</a></li>
+          <li><a href="#">Beneficios del Trabajador</a></li>
+          <li><a href="#">Credito</a></li>
+          <li><a href="#">SISA</a></li>
+          <li><a href="#">Inversora</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contactos</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Intranet
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Fucionarios</a></li>
+          <li><a href="#">Sucursales</a></li>
+          <li><a href="#">Fucionarios Sucursales</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

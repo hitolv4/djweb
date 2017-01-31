@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'league_gothicregular';
+    src: url('../../fonts/lineademando/fonts/league_gothic-webfont.eot');
+    src: url('../../fonts/lineademando/fonts/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/lineademando/fonts/league_gothic-webfont.woff') format('woff'),
+        url('../../fonts/lineademando/fonts/league_gothic-webfont.ttf') format('truetype'),
+        url('../../fonts/lineademando/fonts/league_gothic-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+h1{
+    text-align: center;
+    padding:5px 0px 0px 0px;
+    color:#1070B7;
+}
+.line{
+    background:url(../../image/lineademando/background.png) repeat 0;
+    width:100%;
+    margin-top:-5%;
+    height:1150px;
+    max-width: 990px;
+    padding-left: 0px;
+}
+.container1 {
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    margin-left: 40%;
+    
+}
+.container2 {
+    width: 200px;
+    height: 220px;
+    margin: 0 auto;
+    margin-left: 20%;
+    margin-top:-80px ;
+    float: left;
+}
+.container3 {
+    width: 200px;
+    height: 220px;
+    margin: 0 auto;
+    margin-left:30%;
+    
+}
+.container4 {
+    width: 200px;
+    height: 220px;
+    margin: 0 auto;
+    margin-left:40%;
+}
+.container5 {
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    margin-left:50%
+}
+@media screen and (max-width:768px){
+    .linea{margin-top: -15%;height:730px; /*background: red;*/}
+    .container1{width:100px; height:100px;}   
+    .container2{width:100px; height:100px; margin-left: 20%; margin-top:-20px ; padding:0px 0px 0px 0px;}
+    .container3{
+               width:100px;
+               height:100px;
+               margin-left: 25%;
+               margin-top:200px;
+               padding:0px 0px 0px 0px;             
+    }
+    .container4{
+               width:100px;
+               height:100px;
+               margin-left: 30%;
+               margin-top:10px;
+               padding:0px 0px 0px 0px;             
+    }
+     .container5{
+               width:100px;
+               height:100px;
+               margin-left: 35%;
+               margin-top:inherit;
+               padding:0px 0px 0px 0px;             
+    }
+}

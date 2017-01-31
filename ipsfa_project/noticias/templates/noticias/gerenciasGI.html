@@ -1,0 +1,62 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+
+
+{% block gerencia %}
+
+    
+
+    
+<div class="col-md-12">
+<h1 style="color:#1070b7; margin-left:20px; font-size: 23px;font-size: 23px;
+    text-align: left;"><strong>  GERENCIAS INTERNAS  </strong></h1>
+<br>
+</div>
+
+
+<div class="gerencias">
+
+        {% for gerencia in GI %}
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                <div class="fotoge">
+                    <img src="{% url 'lista_publicaciones' %}media/{{gerencia.gerente.imagen}}" class="img-circle">                 
+                </div>
+                </div>
+                <div class="col-md-8">
+                <div class="txtge">
+                    <strong style="color: #1070BA; font-size: 16px;">{{gerencia.gerencia}}</strong>
+                    <br>
+                    {{ gerencia.gerente.rango}} {{gerencia.gerente}} 
+                    <br>
+                    <strong>Correo Instirucional: </strong>{{gerencia.correo}}
+                    <br>
+                    <strong>Teléfono de Contacto: </strong>{{gerencia.telefono}}
+                    <br>
+                    <strong>Dirección: </strong>{{gerencia.direccion}}
+                    <br>
+                    <strong>Horario: </strong>{{gerencia.horario}}
+                    <div class="boton">
+                        <a href="{% url 'detalle2' pk=gerencia.pk %}">
+                            Ver Más Información
+                        </a> 
+                    </div>
+                </div>
+                </div>
+                
+
+            </div>
+                </div>
+                <div class="col-md-12">
+                    <br>
+                    <br>
+                    <br>
+        </div>
+            
+        {% endfor %}
+
+</div>
+
+{% endblock gerencia %}

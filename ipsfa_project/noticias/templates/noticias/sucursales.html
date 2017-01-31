@@ -1,0 +1,55 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+
+
+{% block sucursal %}
+    
+<div class="col-md-12">
+<h1 style="color:#1070b7; margin-left:20px; font-size: 23px;font-size: 23px;
+    text-align: left;"><strong> SUCURSALES  </strong></h1>
+<br>
+</div>
+
+
+<div class="sucursales">
+
+        {% for sucursal in sucur %}
+        
+        <div class="container-fluid">
+            <div class="row">
+            <div class= "fondo">
+                <div class="col-md-4">
+                <div class="fotosu">
+                    <img src="{% url 'lista_publicaciones' %}media/{{sucursal.director.imagen}}" class="img-circle">                 
+                </div>
+                </div>
+                <div class="col-md-8">
+                <div class="txtsu">
+                    <strong style="color: #1070BA; font-size: 16px;">{{sucursal.ciudad}}</strong>
+                    <br>
+                    {{ sucursal.director.rango}} {{sucursal.director}}
+                    <br>
+                    <strong>Correo Instirucional: </strong>{{sucursal.correo}}
+                    <br>
+                    <strong>Teléfono de Contacto: </strong>{{sucursal.telefono}}
+                    <br>
+                    <strong>Dirección: </strong>{{sucursal.direccion}}
+                    <br>
+                    <strong>Horario: </strong>{{sucursal.horario}}
+                </div>
+                </div>
+                </div>
+
+            </div>
+                </div>
+                <div class="col-md-12">
+                    <br>
+                    <br>
+                    <br>
+        </div>
+            
+        {% endfor %}
+
+</div>
+
+{% endblock sucursal %}

@@ -1,0 +1,37 @@
+
+/**sucursal**/
+
+.sucursales {
+	width: 100%; 
+	height: 500px; 
+	position:static; 
+	font-family: Montserrat;
+
+}
+.txtsu{ 
+	width:68%; 
+	height: 65%; 
+	margin-left: -15%;
+	margin-right: 100px; 
+	margin-top: 4%; 
+	color: #000; 
+	font-size: 14px;
+}
+.fotosu{
+	width:25%; 
+	height: 100%;
+	margin-left:20%; 
+	margin-top: 1%;
+
+}
+
+
+
+ /**Sucursal
+.sucursal{background: rgba(230,230,230,1.00); width:100%;	height:48%;	margin-top:20px;}
+.contentsu{position:relative; width:100%; height:100%;}
+.fotosu{position:absolute; width:25%; height: 100%; margin-left:2%; margin-top: 1%;}
+.txtsu{position:absolute; width:68%; height: 65%; margin-left:28%; margin-right: 100px; margin-top: 4%; color: #000; font-size: 14px;}
+
+**/ 
+	

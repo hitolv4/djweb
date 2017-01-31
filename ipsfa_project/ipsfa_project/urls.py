@@ -19,7 +19,9 @@ from django.contrib import admin
 urlpatterns = [
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home')
-
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^chaining/', include('smart_selects.urls')),
     url(r'', include('noticias.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
+
 ]
