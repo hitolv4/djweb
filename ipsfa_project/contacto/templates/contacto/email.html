@@ -1,0 +1,90 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+{% block contacto %}
+<style type="text/css">
+
+.contacto  {
+	color: #000;
+	font-family: Montserrat; 
+	font-size: 14px; 
+	margin:0px 0px 15px 0px; 
+}
+.contacto p {
+	text-align:justify;
+	margin:0px 25px 0px 25px;
+}
+
+.contacto form {
+  
+  padding-left: 300px;
+  text-align:left;
+
+}
+
+.contacto table{color: #000; font-size: 14px; margin: 20px 0 20px 0;}
+
+.contacto .form-actions {
+	padding-left:160px; 
+}
+
+.contacto input {
+	width:250px;
+
+}
+
+.contacto textarea{
+
+	height:60px;
+
+}
+
+.contacto td, th{
+	padding: 2px;
+}
+.botonComun{
+	width:80px; 
+	height:30px; 
+	color:#fff; 
+	text-align:center; 
+	cursor:pointer; 
+	background:#1070B7; 
+	padding:5px; 
+	border-radius:10px;}
+
+.botonComun:hover{
+    background-image: -webkit-linear-gradient(top, #1070b7, #00345a);
+    background-image: -moz-linear-gradient(top, #1070b7, #00345a);
+    background-image: -ms-linear-gradient(top, #1070b7, #00345a);
+    background-image: -o-linear-gradient(top, #1070b7, #00345a);
+    background-image: linear-gradient(top, #1070b7, #00345a);
+            }
+
+.contacto a{text-decoration: none; font-size: 12pt; color:#00345a}
+
+</style>
+
+<div class="contacto">
+<h1>Contácto</h1>
+<br>
+<br>
+<p>A través de esta sección usted podrá comunicarse directamente con las Gerencias de nuestro Instituto, para solicitar audiencias, tramitar novedades, denuncias, plantear sugerencias, etc.. Esta Información será tratada con carácter confidencial.</p>
+<form method="post">
+	<table>
+	{% csrf_token %}
+	{{ form.as_table }}
+	
+	</table>
+	<div class="form-actions">
+		<button type="submit" class="botonComun">Enviar</button>
+		<button type="reset" class="botonComun">Borrar</button>
+	</div>
+	</form>
+	<br><br>
+	
+	<span style="display: block; text-align:center;">
+	<strong>
+    	<a href="{% static "image/directorioTelefonicoIPSFA.pdf" %}" target="_blank">Click Aqu&iacute; para Descargar el Directorio Telef&oacute;nico IPSFA 2016</a>
+	</strong>
+</span>
+	</div>
+	{% endblock contacto %} 

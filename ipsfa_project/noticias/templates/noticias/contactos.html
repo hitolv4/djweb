@@ -1,0 +1,184 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+
+{% block contactos %}
+    
+
+<style>
+    #contenedorContactos{position: relative; width:100%; margin-top:3%; height:460px;}
+    #Contacto{width: 95%; position: relative; margin: auto}
+    #Contacto a{text-decoration: none; font-size: 12pt; color:#00345a}
+    #contenedorContactos p {color:#000; font-size:14px; line-height:none; text-align:justify;}
+    span{display: list-item; text-indent:0px; font-size: 14px; margin-left: 5%; text-align: justify; line-height: 2em;}
+    table{color: #000; font-size: 14px; margin: 20px 0 20px 0;}
+
+    .botonComun{width:80px; height:30px; color:#fff; text-align:center; cursor:pointer; background:#1070B7; padding:5px; border-radius:10px;}
+	
+    input{margin: 3px;}
+
+    select{margin: 3px;}
+
+    textarea{margin: 3px;}
+
+	a:hover{color:#1070b7}
+    
+    .botonComun:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a);
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a);
+            background-image: -o-linear-gradient(top, #1070b7, #00345a);
+            background-image: linear-gradient(top, #1070b7, #00345a);
+            }
+    
+
+
+</style>
+
+<!-- Inicio: Main content area starts -->
+<div id="contenedorContactos">
+    <div id="Contacto">
+        <p align="justify" style="font-size: 18px; color:#1070b7"><strong>Cont&aacute;cto</strong></p>   
+        
+            <br/>
+                
+        <p align="justify" style="text-indent:2em">
+			A trav&eacute;s de esta secci&oacute;n usted podr&aacute; comunicarse directamente con las Gerencias de nuestro Instituto, para solicitar audiencias, tramitar novedades, denuncias, plantear sugerencias, etc.. Esta Informaci&oacute;n ser&aacute; tratada con car&aacute;cter confidencial.
+        </p>
+        
+        <br/>
+    
+    <script language="javascript">
+        function validarDatos(){
+		if (!document.contacto.form_nombre_persona.value){
+			alert("Informaci\u00f3n requerida");
+			document.contacto.form_nombre_persona.focus();
+			return false;
+		}
+		
+		if (!document.contacto.form_correo_persona.value){
+			alert("Informaci\u00f3n requerida");
+			document.contacto.form_correo_persona.focus();
+			return false;
+		}
+		
+		if (!document.contacto.form_telefono_persona.value){
+			alert("Informaci\u00f3n requerida");
+			document.contacto.form_telefono_persona.focus();
+			return false;
+		}
+		
+		if (!document.contacto.form_gerencia_email.value){
+			alert("Informaci\u00f3n requerida");
+			document.contacto.form_gerencia_email.focus();
+			return false;
+		}
+		
+		if (!document.contacto.form_pregunta_persona.value){
+			alert("Informaci\u00f3n requerida");
+			document.contacto.form_pregunta_persona.focus();
+			return false;
+		}else{
+			document.contacto.submit();
+		}
+        }
+    </script>
+
+
+<!-- Inicio: Main content area starts -->
+<form name="contacto" action="email/_email_budget_send.php" method="post">
+<table width="auto" border="0" cellspacing="0" cellpadding="0" class="contendorForma" align="center" style="margin:auto; margin-top:20px;">
+    <tr>
+    <td class="contendorForma">
+        <table width="auto" border="0" cellspacing="8" cellpadding="0" class="textoDesceiptivo">
+        <tr>
+            <td align="right" class="listasLetras">
+                <b>Nombre</b>
+            </td>
+            
+            <td>
+                <input name="form_nombre_persona" type="text" class="cuadroTextoContactos" id="form_nombre_persona" size="30" maxlength="50"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" class="listasLetras">
+                <b>Correo</b>
+            </td>
+            
+            <td>
+                <input name="form_correo_persona" type="text" class="cuadroTextoContactos" id="form_correo_persona" size="30" maxlength="50"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" class="listasLetras"><b>N&uacute;mero</b></td>
+            <td><input name="form_telefono_persona" type="text" class="cuadroTextoContactos" id="form_telefono_persona" size="30" maxlength="50"/></td>
+        </tr>
+        <tr>
+            <td align="right" class="listasLetras">
+                <b>C&eacute;dula</b>
+            </td>
+            <td><input name="form_cedula_persona" type="text" class="cuadroTextoContactos" id="form_cedula_persona" size="30" maxlength="50"/></td>
+        </tr>
+            
+            
+        <tr>
+            <td align="right" class="listasLetras"><b>Gerencia</b></td>
+            <td>
+            <select name="form_gerencia_email"  class="cuadroCombinadoContactos" id="form_gerencia_email">
+                <option value="">- - - - - - - - - - - - - - - - - - - </option>
+                <option value="presidencia@ipsfa.gob.ve#Presidencia">Presidencia</option> 
+                <option value="vicepresidencia@ipsfa.gob.ve#VicePresidencia">VicePresidencia</option>
+                <option value="odontologia@ipsfa.gob.ve#Clínica Odontologíca">Cl&iacute;nica Odontolog&iacute;ca</option>
+                <option value="constructora.ipsfa@ipsfa.gob.ve#Constructora IPSFA">Constructora IPSFA</option>
+                <option value="ifamil@ipsfa.gob.ve#IFAMIL">IFAMIL</option>
+                <option value="inversora_ipsfa@ipsfa.gob.ve#Inversora IPSFA">Inversora IPSFA</option>
+                <option value="afiliacion@ipsfa.gob.ve#Gerencia de Afiliación">Gerencia de Afiliaci&oacute;n</option> 
+                <option value="auditoria@ipsfa.gob.ve#Gerencia de Auditoría Interna">
+                Gerencia de Auditor&iacute;a Interna</option> 
+                <option value="bienestarsocial@ipsfa.gob.ve#Gerencia de Bienestar y Seguridad Social">
+                Gerencia de Bienestar y Seguridad Social</option> 
+                <option value="credito@ipsfa.gob.ve#Gerencia de Créditos">Gerencia de Cr&eacute;ditos</option>
+                <option value="consultoria@ipsfa.gob.ve#Gerencia de Consultoría Jurídica">Gerencia de Consultor&iacute;a Jur&iacute;dica</option> 
+                <option value="drogueria@ipsfa.gob.ve#Gerencia de Droguería y Farmacia">Gerencia de Droguer&iacute;a y Farmacia</option> 
+                <!--<option value="gerenciadrogueriaipsfa.caracas@ipsfa.gob.ve#Gerencia de Droguería y Farmacia">Gerencia de Droguer&iacute;a y Farmacia (Caracas)</option> -->
+                <option value="empresas@ipsfa.gob.ve#Gerencia de Empresas">Gerencia de Empresas</option> 
+                <option value="finanzas@ipsfa.gob.ve#Gerencia de Finanzas">Gerencia de Finanzas</option> 
+                <option value="informatica@ipsfa.gob.ve#Gerencia de Informática">Gerencia de Inform&aacute;tica</option>
+                <option value="logistica@ipsfa.gob.ve#Gerencia de Logística">Gerencia de Log&iacute;stica</option>
+                <option value="planificacion@ipsfa.gob.ve#Gerencia de Planificación y Presupuesto">Gerencia de Planificaci&oacute;n y Presupuesto</option>
+                <option value="rrhh@ipsfa.gob.ve#Gerencia de Recursos Humanos">Gerencia de Recursos Humanos</option> 
+                <option value="rrpp@ipsfa.gob.ve#Gerencia de Relaciones Públicas">Gerencia de Relaciones P&uacute;blicas</option>
+                <option value="seguridad@ipsfa.gob.ve#Gerencia de Seguridad Integral">Gerencia de Seguridad Integral</option>
+                <option value="vivienda@ipsfa.gob.ve#Gerencia de Vivienda">Gerencia de Vivienda</option>
+                <option value="atencionpreferencial@ipsfa.gob.ve#Oficina de Atencion al Pensionado">Oficina de Atenci&oacute;n al Pensionado</option>
+                <option value="secretariageneral@ipsfa.gob.ve#Secretar&iacute;a General">Secretar&iacute;a General</option>
+                <option value="sisa@ipsfa.gob.ve#SISA">SISA</option>
+
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" valign="top" class="listasLetras"><b>Pregunta</b></td>
+            <td><textarea name="form_pregunta_persona" cols="30" class="cuadroCombinadoContactosII" id="form_pregunta_persona"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" class="formaPiePagina">
+                <input type="button" name="Submit" value="Enviar"  class="botonComun" onclick="validarDatos()"/>
+                <input type="reset" name="Submit2" value="Borrar"  class="botonComun"/>
+            </td>
+        </tr>
+        </table>        
+    </td>
+    </tr>
+</table>
+</form>
+
+<span style="display: block; text-align:center;">
+	<strong>
+    	<a href="contactos/directorioTelefonicoIPSFA.pdf" target="_blank">Click Aqu&iacute; para Descargar el Directorio Telef&oacute;nico IPSFA 2016</a>
+	</strong>
+</span>
+
+</div>
+</div>
+
+{% endblock contactos %}

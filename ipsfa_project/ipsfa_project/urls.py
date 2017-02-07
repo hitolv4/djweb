@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^chaining/', include('smart_selects.urls')),
     url(r'', include('noticias.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^', include('contacto.urls')),
 
 ]

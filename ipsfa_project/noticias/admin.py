@@ -29,13 +29,13 @@ class DocumentosInline(admin.StackedInline):
     extra = 1
     
 
-class BeneficioAdmin(admin.ModelAdmin):
+"""class BeneficioAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Datos', {'fields': ['autor', 'dependencia', 'beneficio', 
                               'texto', 'fecha_creacion', 'fecha_publicacion']})
     ]
     inlines = [DocumentosInline]
-
+"""
 
 admin.site.register(Nota, NotaAdmin)
 
@@ -60,4 +60,4 @@ admin.site.register(Componente)
 
 admin.site.register(Rango)
 
-admin.site.register(Beneficio, BeneficioAdmin)
+#admin.site.register(Beneficio, BeneficioAdmin)

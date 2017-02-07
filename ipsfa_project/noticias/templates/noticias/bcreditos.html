@@ -1,0 +1,457 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+{% block beneficios %}
+	
+
+<style>
+   .contenedorBeneficios{position: relative; width:100%; margin: auto; max-width:100%; height:600px;}
+    #beneficios{position: relative; width:100%; color:#000; font-family: Montserrat; height:600px; margin-top:-4px; font-size:12pt;}
+
+    /** Estilo de Beneficios **/
+	#contenedor{ height:660px; /*background: pink;*/}
+   #menu{float:left; border-right:0px solid #00345A; height:660px; width:25%;  background-color: #00345A;}
+
+	#cuerpo{height:auto; width:100%; border:0px; margin: 0px auto;z-index: -9999; }
+	/*.my-menu:hover{background-color: #f3f3f3;text-shadow: 3px 3px 6px #000;}*/
+
+	/*Menu-lv-content-Mapas*/
+	.lv-content{
+		margin-left:0px; border-top:0px solid #000; border-left:0px solid #000; border-bottom:0px solid #000; 
+		border-top-left-radius: 0px; border-bottom-left-radius: 0px; padding-left: 0px; height:40px; width:100%;
+		}
+		
+	.content-1{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-1:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+
+	.content-2{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-2:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+    
+	.content-3{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-3:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+    
+	.content-4{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-4:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+    
+	.content-5{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-5:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+    
+	.content-6{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-6:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+    
+	.content-7{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-7:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+    
+	.content-8{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-8:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+       
+	.content-9{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-9:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+			.content-10{
+		border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+		border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+		.content-10:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+    
+    @media screen and (max-width:960px){
+        .scrollbar{height: 500px; width: 65%; font-size: 8px;}
+        p{line-height: normal; font-family: Montserrat; font-size:8px; line-height: normal;}
+        #contenedor{ height:720px;}
+        #menu{height:720px;}
+        }
+
+    @media screen and (max-width:480px){
+        .scrollbar{height: 500px; width: 65%; font-size: 8px;}
+        p{line-height: normal; font-family: Montserrat; font-size:8px;}
+        #contenedor{ height:720px;}
+        #menu{height:720px;}
+        }
+    
+hr {border: 0,1px solid grey; height: 0; width: 100%;}
+
+.scrollbar{margin-left: 10px; float: left; height: 635px; max-width: 71.8%; padding:10px; background: #FFFFFF; overflow-y: scroll;	margin-bottom: 25px; font-size: 14px;}
+::-webkit-scrollbar {width:10px;height:10px;}
+::-webkit-scrollbar-button {background-color: #1070b7;}
+::-webkit-scrollbar-track-piece {background-color:#00345a;}
+::-webkit-scrollbar-thumb {height:10px; background-color:#1070b7; border-radius:0px;}
+
+</style>
+
+<!--inicio script: mostrar Contenido Llamando ID para ocultar o mostrar-->
+<script type="text/javascript">
+var img = jQuery.noConflict();
+    img(document).ready(function(){
+    	img("#mostrar_content1").click(function(){
+    			img(".contenido1").show();//Lo que quiero mostrar content1
+				img(".contenido2").hide();//Lo que quiero mostrar content2
+				img(".contenido3").hide();//Lo que quiero ocultar content3
+				img(".contenido4").hide();//Lo que quiero ocultar content4
+				img(".contenido5").hide();//Lo que quiero ocultar content5
+    			img(".contenido6").hide();//Lo que quiero mostrar content6
+				img(".contenido7").hide();//Lo que quiero mostrar content7
+				img(".contenido8").hide();//Lo que quiero ocultar content8
+				img(".contenido9").hide();//Lo que quiero ocultar content9
+				img(".contenido10").hide();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13
+				img(".contenido14").hide();//Lo que quiero ocultar content14																
+    		});
+		img("#mostrar_content2").click(function(){//para Planta Baja
+				img(".contenido1").hide();//Lo que quiero mostrar content1
+				img(".contenido2").show();//Lo que quiero mostrar content2
+				img(".contenido3").hide();//Lo que quiero ocultar content3
+				img(".contenido4").hide();//Lo que quiero ocultar content4
+				img(".contenido5").hide();//Lo que quiero ocultar content5
+    			img(".contenido6").hide();//Lo que quiero mostrar content6
+				img(".contenido7").hide();//Lo que quiero mostrar content7
+				img(".contenido8").hide();//Lo que quiero ocultar content8
+				img(".contenido9").hide();//Lo que quiero ocultar content9
+				img(".contenido10").hide();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13
+				img(".contenido14").hide();//Lo que quiero ocultar content14									
+			});
+		img("#mostrar_content3").click(function(){//para Primer Piso
+				img(".contenido1").hide();//Lo que quiero mostrar content1
+				img(".contenido2").hide();//Lo que quiero mostrar content3
+				img(".contenido3").show();//Lo que quiero ocultar content2
+				img(".contenido4").hide();//Lo que quiero ocultar content4
+				img(".contenido5").hide();//Lo que quiero ocultar content5
+    			img(".contenido6").hide();//Lo que quiero mostrar content6
+				img(".contenido7").hide();//Lo que quiero mostrar content7
+				img(".contenido8").hide();//Lo que quiero ocultar content8
+				img(".contenido9").hide();//Lo que quiero ocultar content9
+				img(".contenido10").hide();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13
+				img(".contenido14").hide();//Lo que quiero ocultar content14									
+			});
+		img("#mostrar_content4").click(function(){//para Segundo Piso
+				img(".contenido1").hide();//Lo que quiero mostrar content1
+				img(".contenido2").hide();//Lo que quiero mostrar content3
+				img(".contenido3").hide();//Lo que quiero ocultar content2
+				img(".contenido4").show();//Lo que quiero ocultar content4
+				img(".contenido5").hide();//Lo que quiero ocultar content5
+    			img(".contenido6").hide();//Lo que quiero ocultar content5
+				img(".contenido7").hide();//Lo que quiero mostrar content7
+				img(".contenido8").hide();//Lo que quiero ocultar content8
+				img(".contenido9").hide();//Lo que quiero ocultar content9
+				img(".contenido10").hide();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13	
+				img(".contenido14").hide();//Lo que quiero ocultar content14								
+			});
+		img("#mostrar_content5").click(function(){//para Tercer Piso
+				img(".contenido1").hide();//Lo que quiero mostrar content1
+				img(".contenido2").hide();//Lo que quiero mostrar content3
+				img(".contenido3").hide();//Lo que quiero ocultar content2
+				img(".contenido4").hide();//Lo que quiero ocultar content4
+				img(".contenido5").show();//Lo que quiero ocultar content5
+    			img(".contenido6").hide();//Lo que quiero ocultar content5
+				img(".contenido7").hide();//Lo que quiero mostrar content7
+				img(".contenido8").hide();//Lo que quiero ocultar content8
+				img(".contenido9").hide();//Lo que quiero ocultar content9
+				img(".contenido10").hide();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13	
+				img(".contenido14").hide();//Lo que quiero ocultar content14								
+			});
+		img("#mostrar_content6").click(function(){//para Tercer Piso
+				img(".contenido1").hide();//Lo que quiero mostrar content1
+				img(".contenido2").hide();//Lo que quiero mostrar content3
+				img(".contenido3").hide();//Lo que quiero ocultar content2
+				img(".contenido4").hide();//Lo que quiero ocultar content4
+				img(".contenido5").hide();//Lo que quiero ocultar content5
+    			img(".contenido6").show();//Lo que quiero mostrar content6
+				img(".contenido7").hide();//Lo que quiero mostrar content7
+				img(".contenido8").hide();//Lo que quiero ocultar content8
+				img(".contenido9").hide();//Lo que quiero ocultar content9
+				img(".contenido10").hide();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13
+				img(".contenido14").hide();//Lo que quiero ocultar content14									
+			});	
+		img("#mostrar_content7").click(function(){//para Tercer Piso
+				img(".contenido1").hide();//Lo que quiero mostrar content1
+				img(".contenido2").hide();//Lo que quiero mostrar content3
+				img(".contenido3").hide();//Lo que quiero ocultar content2
+				img(".contenido4").hide();//Lo que quiero ocultar content4
+				img(".contenido5").hide();//Lo que quiero ocultar content5
+    			img(".contenido6").hide();//Lo que quiero ocultar content5
+				img(".contenido7").show();//Lo que quiero mostrar content7
+				img(".contenido8").hide();//Lo que quiero ocultar content8
+				img(".contenido9").hide();//Lo que quiero ocultar content9
+				img(".contenido10").hide();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13
+				img(".contenido14").hide();//Lo que quiero ocultar content14									
+			});	
+		img("#mostrar_content8").click(function(){//para Tercer Piso
+				img(".contenido1").hide();//Lo que quiero mostrar content1
+				img(".contenido2").hide();//Lo que quiero mostrar content3
+				img(".contenido3").hide();//Lo que quiero ocultar content2
+				img(".contenido4").hide();//Lo que quiero ocultar content4
+				img(".contenido5").hide();//Lo que quiero ocultar content5
+    			img(".contenido6").hide();//Lo que quiero mostrar content6
+				img(".contenido7").hide();//Lo que quiero mostrar content7
+				img(".contenido8").show();//Lo que quiero ocultar content8
+				img(".contenido9").hide();//Lo que quiero ocultar content9
+				img(".contenido10").hide();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13
+				img(".contenido14").hide();//Lo que quiero ocultar content14									
+			});	
+		img("#mostrar_content9").click(function(){//para Tercer Piso
+				img(".contenido1").hide();//Lo que quiero mostrar content1
+				img(".contenido2").hide();//Lo que quiero mostrar content3
+				img(".contenido3").hide();//Lo que quiero ocultar content2
+				img(".contenido4").hide();//Lo que quiero ocultar content4
+				img(".contenido5").hide();//Lo que quiero ocultar content5
+    			img(".contenido6").hide();//Lo que quiero mostrar content6
+				img(".contenido7").hide();//Lo que quiero mostrar content7
+				img(".contenido8").hide();//Lo que quiero ocultar content8
+				img(".contenido9").show();//Lo que quiero ocultar content9
+				img(".contenido10").hide();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13
+				img(".contenido14").hide();//Lo que quiero ocultar content14									
+						});	
+		img("#mostrar_content10").click(function(){//para Tercer Piso
+				img(".contenido1").hide();//Lo que quiero mostrar content1
+				img(".contenido2").hide();//Lo que quiero mostrar content3
+				img(".contenido3").hide();//Lo que quiero ocultar content2
+				img(".contenido4").hide();//Lo que quiero ocultar content4
+				img(".contenido5").hide();//Lo que quiero ocultar content5
+    			img(".contenido6").hide();//Lo que quiero mostrar content6
+				img(".contenido7").hide();//Lo que quiero mostrar content7
+				img(".contenido8").hide();//Lo que quiero ocultar content8
+				img(".contenido9").hide();//Lo que quiero ocultar content9
+				img(".contenido10").show();//Lo que quiero ocultar content10			
+				img(".contenido11").hide();//Lo que quiero ocultar content11
+				img(".contenido12").hide();//Lo que quiero ocultar content12
+				img(".contenido13").hide();//Lo que quiero ocultar content13
+				img(".contenido14").hide();//Lo que quiero ocultar content14									
+			});										
+			
+	});
+</script>
+<!--fin script: mostrar Contenido Llamando ID para ocultar o mostrar-->
+
+<div class="contenedorBeneficios">
+    <div id="beneficios">
+        <!--CONTENEDOR DE CONTENIDOS-->
+        <div id="contenedor">
+            <!--CONTENEDOR ANIDADO RENOMBRANDO CUERPO-->
+            <div id="cuerpo" style="border:0px solid #1070b7; height:auto;">
+                <!--MENU-->
+                <div id="menu">
+                  <!--Botones de lv-content del MENU-->
+                  <div class="lv-content">
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content1">
+                        <div class="content-1">
+                            <p style="" align="center"><strong>COMPUTACI&Oacute;N Y ACCESORIOS</strong></p>			
+                        </div>
+                    </a>
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content2">
+                        <div class="content-2">
+                            <p style="" align="center"><strong>HIPOTECARIO</strong></p>			
+                        </div>
+                    </a>
+                    <!--<a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content3">
+                        <div class="content-3">
+                            <p style="" align="center"><strong>HIPOTECARIO BANAVIH-IPSFA</strong></p>			
+                        </div>
+                    </a>-->
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content4">
+                        <div class="content-4">
+                            <p style="" align="center"><strong>VEHICULO IPSFA</strong></p>			
+                        </div>
+                    </a>
+                    <!--<a style="text-decoration:none; outline: 0; cursor:pointer;" id="mostrar_content5">
+                        <div class="content-5">
+                            <p style="margin-top:-8px;" align="center"><strong>VEHICULO OTROS CONCESIONARIOS</strong></p>
+                        </div>
+                    </a>-->				
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content6">
+                        <div class="content-6">
+                            <p style="" align="center"><strong>PARCELAS EN EL CEMENTERIO</strong></p>			
+                        </div>
+                    </a>	
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content7">
+                        <div class="content-7">
+                            <p style="" align="center"><strong>PERSONAL</strong></p>			
+                        </div>
+                    </a>
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content8">
+                        <div class="content-8">
+                            <p style="" align="center"><strong>PLAN VACACIONAL</strong></p>
+                        </div>
+                    </a>
+                    <!--<a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content9">
+                        <div class="content-9">
+                            <p style="" align="center"><strong>SECOVIMIL</strong></p>
+                        </div>
+                    </a>-->
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content10">
+                        <div class="content-10">
+                            <p style="" align="center"><strong>AUTO SEGURO DE VIVIENDA</strong></p>
+                        </div>
+                    </a>	
+                   
+                  </div>
+                   <!--Fin: Botones de lv-content del MENU-->
+                </div>
+                <!--FIN MENU-->
+                <div class="scrollbar">
+
+                <!--Contenido Seg?n elecci?n del MENU-->
+         
+                    <!--Id con display:none; para evitar que se muestres todos al inicio-->
+                    <p id="content1" class="contenido1" name="contenido_1" style="display:block; overflow:hidden;">
+                      {% include "noticias/beneficios/creditos/computacionaccesorios.html" %}
+                    </p>
+                    <p id="content2" class="contenido2" name="contenido_2" style="display:none; overflow:hidden;">        
+                      {% include "noticias/beneficios/creditos/hipotecario.html" %}
+                  </p>
+                    
+                    <p id="content3" class="contenido3" name="contenido_3" style="display:none; overflow:hidden;">        
+                      {% include "noticias/beneficios/creditos/hipotecariobanavih.html" %}
+                        
+                    </p>
+                    
+                    <p id="content4" class="contenido4" name="contenido_4" style="display:none; overflow:hidden;">        
+                      {% include "noticias/beneficios/creditos/vehiculoipsfa.html" %}
+                        
+                    </p>
+
+                    <p id="content5" class="contenido5" name="contenido_5" style="display:none; overflow:hidden;">        
+                      {% include "noticias/beneficios/creditos/vehiculootros.html" %}
+                      
+                    </p>
+                    
+                    <p id="content6" class="contenido6" name="contenido_6" style="display:none; overflow:hidden;">        
+                      {% include "noticias/beneficios/creditos/parcelacementerio.html" %}  
+                    </p>
+                    
+                    <p id="content7" class="contenido7" name="contenido_7" style="display:none; overflow:hidden;">        
+                      {% include "noticias/beneficios/creditos/creditopersonal.html" %}
+                        
+                    </p>
+
+                    <p id="content8" class="contenido8" name="contenido_8" style="display:none; overflow:hidden;">        
+                      {% include "noticias/beneficios/creditos/planvacacional.html" %}
+                        
+                    </p>                    
+                    <p id="content9" class="contenido9" name="contenido_9" style="display:none; overflow:hidden;">        
+                      {% include "noticias/beneficios/creditos/secomil.html" %}
+                        
+                    </p>
+                    <p id="content10" class="contenido10" name="contenido_10" style="display:none; overflow:hidden;">        
+                      {% include "noticias/beneficios/creditos/autosegurovivienda.html" %}  
+                    </p>
+                    
+                   </div>
+                <!--Fin Contenido-->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock beneficios %}
+
+

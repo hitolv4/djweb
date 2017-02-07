@@ -142,6 +142,53 @@ ul.nav li:hover > ul.dropdown-menu {
 }  
 
 </style>
+<script>
+var positionLeft = (screen.width)-500;
+function funcionarios(){ 
+
+  var alto;
+  var ancho;
+  
+  alto = 600;
+  ancho = 540;
+  estilo = "toolbar=no, location=no, directories=yes, status=yes, menubar=no, scrollbars=yes, resizable =no, left=" + positionLeft + ", top=0, width=" + ancho + ", height=" + alto;
+  
+  ventana = window.open("http://192.168.12.172/netosweb/index.php?tipopersonal=civil&Itemid=259", "", estilo);  
+
+}
+</script>
+
+<script>
+var positionLeft = (screen.width)-500;
+function sucursales(){ 
+
+  var alto;
+  var ancho;
+  
+  alto = 600;
+  ancho = 540;
+  estilo = "toolbar=no, location=no, directories=yes, status=yes, menubar=no, scrollbars=yes, resizable =no, left=" + positionLeft + ", top=0, width=" + ancho + ", height=" + alto;
+  
+  ventana = window.open("http://201.243.91.158/netosweb/index.php?tipopersonal=pensionado&Itemid=252", "", estilo); 
+
+}
+</script>
+
+<script>
+var positionLeft = (screen.width)-500;
+function sucursalesF(){ 
+
+  var alto;
+  var ancho;
+  
+  alto = 600;
+  ancho = 540;
+  estilo = "toolbar=no, location=no, directories=yes, status=yes, menubar=no, scrollbars=yes, resizable =no, left=" + positionLeft + ", top=0, width=" + ancho + ", height=" + alto;
+  
+  ventana = window.open("http://201.243.91.158/netosweb/index.php?tipopersonal=civil&Itemid=259", "", estilo);  
+
+}
+</script>
 
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="navbar-header">
@@ -194,20 +241,20 @@ ul.nav li:hover > ul.dropdown-menu {
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Beneficiarios<b class="caret"></b></a>
           <ul class="dropdown-menu">
           <li><a href="{% url 'lista_publicaciones' %}beneficiarios/afiliacion">Afiliación</a></li>
-          <li><a href="#">Bienestar y Seguridad Social</a></li>
-          <li><a href="#">Beneficios del Trabajador</a></li>
-          <li><a href="#">Credito</a></li>
-          <li><a href="#">SISA</a></li>
-          <li><a href="#">Inversora</a></li>
+          <li><a href="{% url 'lista_publicaciones' %}beneficiarios/bienestar_y_seguridad_social">Bienestar y Seguridad Social</a></li>
+          <li><a href="{% url 'lista_publicaciones' %}beneficiarios/beneficios_del_trabajador">Beneficios del Trabajador</a></li>
+          <li><a href="{% url 'lista_publicaciones' %}beneficiarios/creditos">Credito</a></li>
+          <li><a href="{% url 'lista_publicaciones' %}beneficiarios/sisa">SISA</a></li>
+          <li><a href="{% url 'lista_publicaciones' %}beneficiarios/inversora">Inversora</a></li>
           </ul>
         </li>
-        <li><a href="#">Contactos</a></li>
+        <li><a href="{% url 'lista_publicaciones' %}contacto">Contactos</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Beneficiarios<b class="caret"></b></a>
           <ul class="dropdown-menu">
-          <li><a href="#">Fucionarios</a></li>
-          <li><a href="#">Sucursales</a></li>
-          <li><a href="#">Fucionarios Sucursales</a></li>
+          <li><a href="#" onclick="funcionarios()">Fucionarios</a></li>
+          <li><a href="#" onclick="sucursales()">Sucursales</a></li>
+          <li><a href="#" onclick="sucursalesF()">Fucionarios Sucursales</a></li>
           </ul>
         </li>        
       </ul>

@@ -1,0 +1,81 @@
+<script>
+var positionLeft = (screen.width)-500;
+function ahorroSISA(){ 
+
+  var alto;
+  var ancho;
+  
+  alto = 420;
+  ancho = 504;
+  estilo = "toolbar=no, location=no, directories=yes, status=yes, menubar=no, scrollbars=yes, resizable =no, left=" + positionLeft + ", top=0, width=" + ancho + ", height=" + alto;
+  
+  ventana = window.open("{% url 'lista_publicaciones'%}media/beneficios/sisa/interesesDePago.jpg", "", estilo);	
+
+}
+</script>
+
+
+<style>
+    span{display: block; text-align: justify; text-indent: 5%; line-height: 140%;}
+</style>
+
+<br>
+  
+<span style="text-align:center; text-indent: 0px;">
+    <strong>AHORRO SISA</strong>
+</span>
+
+<span>
+    El Instituto de Previsi&oacute;n Social de las Fuerzas Armadas Nacionales Bolivariana (IPSFA); a trav&eacute;s del SISA, brinda oportunidades de ahorro, pr&eacute;stamos y cr&eacute;ditos a sus afiliados con tasas preferenciales, es por ellos que cuenta con un  departamento de Afiliaci&oacute;n para nuestros personal beneficiado que desee integrar la familia SISA. 
+</span>
+
+    <br/>
+
+<span>
+    Para ahorrar usted deber&aacute; consignar los siguientes recaudos y/o requisitos.
+</span>
+
+    <br/>
+
+<span style="text-indent: 0px;">
+    <strong>Requisitos para su Ahorro en SISA </strong>
+</span>
+
+
+<span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+    Autorizaci&oacute;n de Ahorro Voluntario <strong>
+    <a href="{% url 'lista_publicaciones'%}media/beneficios/sisa/planilla_ahorro2.pdf" target="_blank">[Descargar]</strong></a>
+</span>
+
+<span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+    Si Usted, desea hacer dep&oacute;sito Mayor a 20 mil BsF, deber&aacute; descargar la siguiente planilla
+    <a href="{% url 'lista_publicaciones'%}media/beneficios/sisa/planilla_depositomayor_20mm.pdf" target="_blank"> <strong>[Descargar]</strong></a>
+</span>
+
+<span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+    Si quieres saber cuál es la tasa Activa, la tasa Pasiva o interés del Ahorrista, descargue la siguiente tabla <a href="#" onclick="ahorroSISA()"><strong>[Descargar]</strong></a>
+</span>
+
+
+
+<span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+    Para aquellos militares activos, Reserva Activa, las Viudas y Viudos que deseen aportar ahorro por n&oacute;mina o directamente deducibles a la cuenta financiera, tendr&aacute;n opci&oacute;n entre el 5% y el 10%, podr&aacute;n formular su solicitud voluntaria por escrito al SISA, la cu&aacute;l debe ser superior a tres (03) unidades tributarias ni superior al 30% del neto a cobrar correspondiente.
+</span>
+
+<span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+    En el caso del Trabajador del IPSFA, la solicitud se har&aacute; por intermedio de la Gerencia de Recursos Humanos e indicar&aacute; el porcentaje de su sueldo mensual que destinar&aacute; para tales efectos, entre el 5% y el 10% la cual ser&aacute; deducido de su sueldo mensualmente por la referida Gerencia. Estos porcentajes a que se refiere esta norma solo podr&aacute;n ser modificados despu&eacute;s de transcurrido un (01) a&ntilde;o, contando a partir de la fecha en que el mismo fue determinado por el Afiliado (personal fijo).
+</span>
+
+<span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+    En el caso de los Trabajadores de IFAMIL e Inversora IPSFA, la solicitud se har&aacute; por intermedio de sus Gerencias indicando el porcentaje de su sueldo mensual que se destinar&aacute; para tales efectos entre el 5% y el 10%, el cual ser&aacute; deducido del sueldo mensual por la referida Gerencia. Estos porcentajes a que se refiere esta norma solo podr&aacute;n ser modificados despu&eacute;s de transcurrido un (01) a&ntilde;o, contando a partir de la fecha en que el mismo fue determinado por el Afiliado (personal fijo).
+</span>
+
+    <br/>
+
+<span style="text-indent: 0px;">
+    <strong>Nota Especial Para los Trabajadores del IPSFA</strong>:
+    El Personal Empleado y Obrero del IPSFA puede realizar retiro parcial de su Caja de Ahorro SISA descargando la siguiente planilla.
+    <a href="{% url 'lista_publicaciones'%}media/beneficios/sisa/RETIRO.PARCIAL.pdf" target="_blank"><strong>[Descargar] </strong></a>
+</span>
+
+    <br/>

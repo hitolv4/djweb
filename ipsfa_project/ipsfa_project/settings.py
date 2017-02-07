@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'noticias',
+    'contacto',
     'smart_selects',
     'tinymce',
 ]
@@ -148,3 +149,14 @@ TINYMCE_DEFAULT_CONFIG = {
 }
 
 TINYMCE_JS_URL = '//cdn.tinymce.com/4/tinymce.min.js'
+
+
+# email configuration
+"""EMAIL_HOST = '172.17.2.6'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True"""
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

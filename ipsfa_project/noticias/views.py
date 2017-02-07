@@ -1,3 +1,4 @@
+
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import (Nota, UltimaHora, YoutubeSlide, Slider, CarouselNota,
@@ -77,5 +78,27 @@ def bafiliacion(request):
 
 def detalle3(request, pk):
     bene = get_object_or_404(Beneficio, pk=pk)
-    return render(request,'noticias/detalle3.html', {'bene': bene})
-    
+    return render(request, 'noticias/detalle3.html', {'bene': bene})
+
+
+def bbienestar(request):
+    return render(request, 'noticias/benebienestar.html')
+
+
+def btrabajador(request):
+    return render(request, 'noticias/btrabajador.html')
+
+
+def bcreditos(request):
+    return render(request, 'noticias/bcreditos.html')
+
+
+def bsisa(request):
+    return render(request, 'noticias/bsisa.html')
+
+
+def binversora(request):
+    return render(request, 'noticias/binversora.html')
+
+
+

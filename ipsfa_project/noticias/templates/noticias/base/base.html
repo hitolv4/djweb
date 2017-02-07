@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% csrf_token %}
 <html>
 	<head>
 		<title>IPSFA</title>
@@ -156,7 +157,23 @@
                         {% endblock beneficios %}
                     </div>
                 </div>
-            <!-- fin de Beneficios -->    		
+            <!-- fin de Beneficios -->
+            <!-- contacto -->
+                <div class="row">
+                    <div class"col-md-12">
+                        {% block contacto %}
+                            
+                        {% endblock contacto %}
+                    </div>
+                </div>
+            <!-- fin de contacto -->
+                <div class="row">
+                    <div class"col-md-12">
+                        {% block exito %}
+                            
+                        {% endblock exito %}
+                    </div>
+                </div>	
         </div>
         {% if  posts and uhs and slides and imagenes %}
 

@@ -16,8 +16,18 @@ urlpatterns = [
     url(r'^gerencias/filiales_y_u_negocio/$', views.gerenciasFyU,
         name='gerenciasFyU'),
     url(r'^gerencias/gerencias_internas/$', views.gerenciasGI,
-        name='gerenciasGI'),            
+        name='gerenciasGI'),
     url(r'^gerencias/(?P<pk>\d+)/$', views.detalle2, name='detalle2'),
     url(r'^beneficiarios/afiliacion/$', views.bafiliacion, name='bafiliacion'),
-    url(r'^beneficiarios/afiliacion/(?P<pk>\d+)/$', views.detalle3, name='detalle3'),
+    url(r'^beneficiarios/afiliacion/(?P<pk>\d+)/$',
+        views.detalle3, name='detalle3'),
+    url(r'^beneficiarios/bienestar_y_seguridad_social/$',
+        views.bbienestar, name='bbienestar'),
+    url(r'^beneficiarios/beneficios_del_trabajador/$',
+        views.btrabajador, name='btrabajador'),
+    url(r'^beneficiarios/sisa/$', views.bsisa, name='sisa'),
+    url(r'^beneficiarios/creditos/$', views.bcreditos, name='creditos'),
+    url(r'^beneficiarios/inversora/$', views.binversora, name='inversora'),
+
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

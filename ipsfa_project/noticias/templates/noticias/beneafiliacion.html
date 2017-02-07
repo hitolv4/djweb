@@ -2,36 +2,309 @@
 {% load staticfiles %}
 
 {% block beneficios %}
+<style>
+    .contenedorBeneficios{position: relative; width:100%; margin: auto; max-width:100%; height:690px;}
+    #beneficios{position: relative; width:100%; color:#000; font-family: Montserrat; height:690px; margin-top:-4px; font-size:12pt;}
+
+    /** Estilo de Beneficios **/
+    #contenedor{ height:720px;}
+    #menu{float:left; border-right:0px solid #00345A; height:750px; width:25%;  background-color: #00345A;}
+    #cuerpo{height:auto; width:100%; border:0px; margin: 0px auto;z-index: -9999; }
+    /*.my-menu:hover{background-color: #f3f3f3;text-shadow: 3px 3px 6px #000;}*/
+
+    /*Menu-lv-content-Mapas*/
+    .lv-content{
+        margin-left:0px; border-top:0px solid #000; border-left:0px solid #000; border-bottom:0px solid #000; 
+        border-top-left-radius: 0px; border-bottom-left-radius: 0px; padding-left: 0px; height:40px; width:100%;
+        }
+        
+    .content-1{
+        border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+        border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+        .content-1:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+
+    .content-2{
+        border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+        border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+        .content-2:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+    
+    .content-3{
+        border:0px;margin-top:0px;height:40px;width:100%; background-color:#00345A; border-bottom:1px solid #fff;
+        border-bottom-right-radius:0px;border-bottom-left-radius:0px; color: #fff; font-size: 12px; padding-top: 6%;}
+        .content-3:hover{
+            background-image: -webkit-linear-gradient(top, #1070b7, #00345a);!important; 
+            background-image: -moz-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -ms-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: -o-linear-gradient(top, #1070b7, #00345a); !important;
+            background-image: linear-gradient(to bottom, #1070b7, #00345a) !important;
+            color: #FFF;
+            }
+    
+    @media screen and (max-width:960px){
+        .scrollbar{height: 500px; width: 65%; font-size: 8px;}
+        p{line-height: normal; font-family: Montserrat; font-size:8px; line-height: normal;}
+        #contenedor{ height:720px;}
+        #menu{height:720px;}
+        }
+
+    @media screen and (max-width:480px){
+        .scrollbar{height: 500px; width: 65%; font-size: 8px;}
+        p{line-height: normal; font-family: Montserrat; font-size:8px;}
+        #contenedor{ height:720px;}
+        #menu{height:720px;}
+        }
+    
+hr {border: 0,1px solid grey; height: 0; width: 100%;}
+
+.scrollbar{margin-left: 10px; float: left; height: 635px; max-width: 71.8%; padding:10px; background: #FFFFFF; overflow-y: scroll;  margin-bottom: 25px; font-size: 14px;}
+
+::-webkit-scrollbar {width:10px;height:10px;}
+::-webkit-scrollbar-button {background-color: #1070b7;}
+::-webkit-scrollbar-track-piece {background-color:#00345a;}
+::-webkit-scrollbar-thumb {height:10px; background-color:#1070b7; border-radius:0px;}
+
+</style>
+
+<script type="text/javascript">
+var img = jQuery.noConflict();
+    img(document).ready(function(){
+        img("#mostrar_content1").click(function(){
+                img(".contenido1").show();//Lo que quiero mostrar content1
+                img(".contenido2").hide();//Lo que quiero mostrar content2
+                img(".contenido3").hide();//Lo que quiero ocultar content3
+            });
+        img("#mostrar_content2").click(function(){//para Planta Baja
+                img(".contenido1").hide();//Lo que quiero mostrar content1
+                img(".contenido2").show();//Lo que quiero mostrar content2
+                img(".contenido3").hide();//Lo que quiero ocultar content3
+            });
+        img("#mostrar_content3").click(function(){//para Primer Piso
+                img(".contenido1").hide();//Lo que quiero mostrar content1
+                img(".contenido2").hide();//Lo que quiero mostrar content3
+                img(".contenido3").show();//Lo que quiero ocultar content2
+            });
+    });
+</script>
+<!--fin script: mostrar Contenido Llamando ID para ocultar o mostrar-->
+
+<div class="contenedorBeneficios">
+<div id="beneficios">
+    <!--CONTENEDOR DE CONTENIDOS-->
+    <div id="contenedor">
+        <!--CONTENEDOR ANIDADO RENOMBRANDO CUERPO-->
+        <div id="cuerpo" style="border:0px solid #1070b7; height:auto;">
+            <!--MENU-->
+            <div id="menu">
+              <!--Botones de lv-content del MENU-->
+              <div class="lv-content">
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content1">
+                        <div class="content-1">
+                            <p style="" align="center"><strong>MILITARES ACTIVOS</strong></p>
+                        </div>
+                    </a>
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content2">
+                        <div class="content-2">
+                            <p style="" align="center"><strong>MILITARES PENSIONADOS</strong></p>
+                        </div>
+                    </a>
+                    <a style="text-decoration:none;outline: 0; cursor:pointer;" id="mostrar_content3">
+                        <div class="content-3">
+                            <p style="" align="center"><strong>SOBREVIVIENTES</strong></p>
+                        </div>
+                    </a>
+               </div>
+               <!--Fin: Botones de lv-content del MENU-->
+            </div>
+            <!--FIN MENU-->
+
+            <!--Contenido Seg?n elecci?n del MENU-->
+            <div class="scrollbar">
+                <!--Id con display:none; para evitar que se muestres todos al inicio-->
+                <p id="content1" class="contenido1" name="contenido_1" style="display:block; overflow:hidden;">        
+                    
+                    {% include "noticias/beneficios/afiliacion/militaresactivos.html" %}
+                </p>
+
+
+                <p id="content2" class="contenido2" name="contenido_2" style="display:none; overflow:hidden;">        
+                    {% include "noticias/beneficios/afiliacion/militarespensionados.html" %}
+                </p>
+
+                <p id="content3" class="contenido3" name="contenido_3" style="display:none; overflow:hidden;">        
+                    {% include "noticias/beneficios/afiliacion/sobrevivientes.html" %}
+                </p>
+            </div>
+            <!--Fin Contenido-->
+        </div>
+    </div>
+</div>
+</div>
+    
+{% endblock beneficios %}
+
+<script type="text/javascript">
+$.ajaxSetup({async: false}); 
+$('[data-toggle="tabajax"]').click(function(e) {
+    var $this = $(this),
+        loadurl = $this.attr('href'),
+        targ = $this.attr('data-target');
+
+    $.get(loadurl, function(data) {
+        $(targ).html(data);
+    });
+
+    $this.tab('show');
+    return false;
+});
+
+$(document).ready(function(){
+    $('[data-toggle="tabajax"]:first').click();
+});
+</script>
+
+<ul class="nav nav-tabs tabs-up" id="friends">
+   <li><a href="{% url 'detalle3' pk=1 %}" data-target="#contacts" class="media_node active span" id="contacts_tab" data-toggle="tabajax" rel="tooltip"> Contacts </a></li>
+   <li><a href="{% url 'detalle3' pk=2 %}" data-target="#friends_list" class="media_node span" id="friends_list_tab" data-toggle="tabajax" rel="tooltip"> Friends list</a></li>
+   <li><a href="{% url 'detalle3' pk=3 %}" data-target="#awaiting_request" class="media_node span" id="awaiting_request_tab" data-toggle="tabajax" rel="tooltip">Awaiting request</a></li>
+</ul>
+<div class="tab-content">
+   <div class="tab-pane active" id="contacts">
+   </div>
+   <div class="tab-pane" id="friends_list">
+   </div>
+   <div class="tab-pane  urlbox span8" id="awaiting_request">
+   </div>
+</div>
+
 
 
 
 <script type="text/javascript">
-jQuery(function () {
-    jQuery('#myTab a').on('click', function() {
-        $(this).tab('show');
-    });
+  $('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
 })
+$('#myTabs a[href="#Militares Activos"]').tab('show')
+$('#myTabs a[href="#Militares Retirados"]').tab('show')
+$('#myTabs a[href="#Sobrevivientes"]').tab('show')  
 </script>
-    <div class="Beneficios">
+<div class="Beneficios">
 
-  <div class="container-fluid">
-<div class="col-md-4">
-                <ul class="nav nav-tabs tabs-left" id="myTabs">
-                {% for item in afi  %}    
-                <li><a href="#{{item.beneficio}}" data-toggle="tab">{{item.beneficio}}</a></li>
-                {% endfor %}     
-                </ul>    
-                </div>
-                <div class="col-md-8">
-                    <div class="tab-content">
-                    {% for item in afi %}                                            
-                        <div class="tab-pane" id="{{item.beneficio}}">{{item.texto|safe}}</div>
-                    {% endfor %}    
-                    </div>
-                </div>
+    <div class="container-fluid">
+    <div class="col-md-4">
+    <ul class="nav nav-tabs tabs-left" id="myTabs">
+    {% for item in afi  %}    
+    <li {% if item.id == 1 %} class="active" {% endif %}>
+    <a href="#{{item.beneficio}}" data-toggle="tab">{{item.beneficio}}</a></li>
+    {% endfor %}     
+    </ul>    
+    </div>
+    <div class="col-md-8">
+    <div class="tab-content">
+    {% for item in afi %}                                            
+    <div style="color: #333;" class="tab-pane {% if item.id == 1 %} active {% endif %}" id="{{item.beneficio}}">{{item.texto|safe}}</div>
+    {% endfor %}    
+    </div>
+    </div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+$('[data-toggle="tabajax"]').click(function(e) {
+    var $this = $(this),
+        loadurl = $this.attr('href'),
+        targ = $this.attr('data-target');
+
+    $.get(loadurl, function(data) {
+        $(targ).html(data);
+    });
+
+    $this.tab('show');
+    return false;
+});
+
+$(document).ready(function(){
+    $('[data-toggle="tabajax"]:first').click();
+});
+</script>
+
+<ul class="nav nav-tabs tabs-up" id="friends">
+   <li><a href="{% url 'detalle3' pk=1 %}" data-target="#contacts" class="media_node active span" id="contacts_tab" data-toggle="tabajax" rel="tooltip"> Contacts </a></li>
+   <li><a href="{% url 'detalle3' pk=2 %}" data-target="#friends_list" class="media_node span" id="friends_list_tab" data-toggle="tabajax" rel="tooltip"> Friends list</a></li>
+   <li><a href="{% url 'detalle3' pk=3 %}" data-target="#awaiting_request" class="media_node span" id="awaiting_request_tab" data-toggle="tabajax" rel="tooltip">Awaiting request</a></li>
+</ul>
+<div class="tab-content">
+   <div class="tab-pane active" id="contacts">
+   </div>
+   <div class="tab-pane" id="friends_list">
+   </div>
+   <div class="tab-pane  urlbox span8" id="awaiting_request">
+   </div>
 </div>
-        
 
 
-{% endblock beneficios %}
 
+
+
+<div class="Beneficios">
+
+<div class="container-fluid">
+
+  <!-- Nav tabs -->
+  <div class="col-md-4">
+  <ul class="nav nav-tabs tabs-left" role="tablist" id="myTabs">
+    <li role="presentation" class="active" ><a href="#MilitaresActivos" aria-controls="MilitaresActivos" role="tab" data-toggle="tab">Militares Activos</a></li>
+    <li role="presentation"><a href="#MilitaresPensionados" aria-controls="MilitaresPencionados" role="tab" data-toggle="tab">Militares Pensionados</a></li>
+    <li role="presentation"><a href="#Sobrevivientes" aria-controls="Sobrevivientes" role="tab" data-toggle="tab">Sobrevivientes</a></li>
+  </ul>
+  </div>
+
+  <!-- Tab panes -->
+  <div class="col-md-8">
+  <div class="tab-content">
+    <div role="tabpanel" style="color: #333;" class="tab-pane active" id="MilitaresActivos">Militares Activos</div>
+    <div role="tabpanel" style="color: #333;" class="tab-pane" id="MilitaresPensionados">Militares Pensionados</div>
+    <div role="tabpanel" style="color: #333;" class="tab-pane" id="Sobrevivientes">Sobrevivientes</div>
+
+  </div>
+  </div>
+
+</div>
+
+</div>
+
+
+
+   <ul class="nav nav-tabs tabs-left" role="tablist" id="myTabs">       
+{% for item in afi  %} 
+<li role="presentation" ><a href="#{{item.beneficio}}" data-toggle="tab">{{item.beneficio}}</a></li>    
+ {% endfor %} 
+ <div class="tab-content">  
+    {% for item in afi  %}
+    <div role="tabpanel" style="color: #333;" class="tab-pane active" id="{{item.beneficio}}">{{item.texto|safe}}</div>
+    <div id="{{item.beneficio}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+   {{item.texto|safe}}
+      </div>
+    </div>
+ {% endfor %}   
+    </div>
+  </div>
