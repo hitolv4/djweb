@@ -1,0 +1,139 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+{% block institucion %}
+	<style>
+.contenedorHimno{
+    font-family: montserrat;
+	width:94%;
+	margin-left:1%;
+	margin-top:3%;
+	margin-bottom:3%;
+	max-width:94%;
+	height:60%;
+	padding:16px;
+	}
+    
+    #textHimno{
+    font-family: montserrat;
+	width:95%;
+	margin-left:2%;
+    color: #000;
+	margin-bottom:3%;
+	height:auto;
+    padding:10px;
+    line-height: 28px;
+    font-size: 12pt;
+    position:relative;
+    text-align: justify;
+    border-left: 4px solid #1070b7;
+    background:#F7FCFC;
+        }
+    
+    #logoHimno{
+        margin:auto;
+        width:150px;
+        height:auto;
+        padding:10px;
+        }
+	    
+@media screen and (max-width:800px){ 
+    #textHimno {font-size: 9pt; width: 82%; line-height: 10pt; }
+    .contenedorHimno h1{font-size: 9pt; width: 82%; line-height: 10pt; }
+    #logoHimno{display: NONE}
+}
+    
+hr {border: 0,1px solid grey; height: 0; width: 100%;}
+</style>
+
+<div class="contenedorHimno">
+
+<h1 style="color:#1070b7;" align="center"><strong>HIMNO DEL IPSFA</strong></h1>
+
+            <div id="logoHimno">
+                <img src="{% static "image/base/minescudoIPSFA-min.png" %}" >
+            </div>
+    <br>
+    
+    <div id="textHimno">
+        
+        <p align="center">
+            <strong>CORO</strong>
+            <br>
+            AL REGAZO DE LA PATRIA, <br>
+            CON LA PROTECCI&Oacute;N DE DIOS <br>
+            VENEREMOS ESTA CASA	<br>
+            QUE NOS DA FE Y ESPERANZA <br>
+            NOS RESGUARDA Y NOS PROTEGE, <br>
+            NOS PROTEGE CON AMOR <br>	
+            BAJO LAS SOMBRAS DE SUS ALAS <br>	
+            NOS SENTIMOS SIN TEMOR. <br>	
+            BAJO LAS SOMBRAS DE SUS ALAS <br>	
+            AVANZAMOS CON FERVOR <br>
+    
+
+            <strong>I</strong> 
+            <br>
+            EL EJ&eacute;RCITO SIEMPRE PROTEGIDO <br>
+            POR EL BRAZO INCANSABLE DE ESTA CASA <br>
+            Y ES POR ESO QUE EL SOLDADO AVANZA ERGUIDO <br>
+            EN DEFENSA Y HONOR DE NUESTRA PATRIA <br>
+
+            
+            
+            <strong>II</strong>
+            <br>
+            LA MARINA VIGILANDO NUESTRAS COSTAS	<br>
+            DEFENDIENDO NUESTRO MAR Y NUESTROS RIOS	<br>
+            TIENDE EL BRAZO CON ORGULLO Y JUBILOSA <br>
+            EN LOOR A NUESTRA CASA Y SU PLANTIO	<br>
+            
+          
+            
+            <strong>CORO</strong>
+            <br>
+            AL REGAZO DE LA PATRIA,	<br>
+            CON LA PROTECCION DE DIOS <br>	
+            VENEREMOS ESTA CASA	<br>
+            QUE NOS DA FE Y ESPERANZA <br>	
+            NOS RESGUARDA Y NOS PROTEGE	<br>
+            NOS PROTEGE CON AMOR <br>	
+            BAJO LA SOMBRA DE SUS ALAS <br>	
+            DESPRECIAMOS EL TEMOR. <br>	
+            BAJO LA SOMBRA DE TUS ALAS <br>	
+            TENEMOS TU PROTECCION <br>	
+
+            
+            
+            <strong>III</strong>
+            <br>
+            LA AVIACION SURCANDO EL ETER DE LA PATRIA <br>
+            EN DEFENSA DEL CIELO TAN SAGRADO <br>	
+            NOS SALUDA CON SUS ALAS DESPLEGADAS	<br>
+            Y EL TRONAR DE SUS MOTORES, NOS REGALA <br>	
+
+           
+            
+            <strong>IV</strong>
+            <br>
+            EL ARROJO DE LA GUARDIA NACIONAL <br>
+            Y SU EMPE&ntilde;O EN GUARDAR LA PAZ Y EL ORDEN <br>	
+            SE UNE ALTIVA EN ESTE CANTO DE HERMANDAD <br>	
+            EN TRIBUTO AL IPSFA Y SU MISION SAGRADA	<br> 
+
+          
+            
+            <strong>CORO</strong>
+            <br>
+            <strong>LETRA:</strong> TENIENTE CORONEL (EJ) VLADIMIR KISLINGER <br>
+            <strong>MUSICA:</strong> FRANKYE MARTINEZ <br>
+            <strong>TRANSCRIPCION Y ARREGLO PARA PIANO:</strong> PROFESOR JES&uacute;S GUEVARA <br>
+           
+        </p>
+    
+</div>
+        
+</div>
+
+
+
+{% endblock institucion %}

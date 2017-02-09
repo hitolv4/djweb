@@ -1,0 +1,97 @@
+{% extends "noticias/base/base.html" %}
+{% load staticfiles %}
+{% block institucion %}
+	<style>
+.contenedorHeraldica{
+    font-family: montserrat;
+	width:94%;
+	margin-left:1%;
+	margin-top:3%;
+	margin-bottom:3%;
+	max-width:94%;
+	height:60%;
+	padding:16px;
+	}
+    
+#textHeraldica{
+    font-family: montserrat;
+	width:95%;
+	margin-left:2%;
+    color: #000;
+	margin-bottom:3%;
+	height:auto;
+    padding:10px;
+    line-height: 28px;
+    font-size: 12pt;
+    position:relative;
+    text-align: justify;
+    border-left: 4px solid #1070b7;
+    background:#F7FCFC;
+    }
+    
+#textHeraldica2{
+    font-family: montserrat;
+	width:95%;
+	margin-left:2%;
+    color: #000;
+	margin-bottom:3%;
+	height:auto;
+    padding:10px;
+    line-height: 28px;
+    font-size: 12pt;
+    position:relative;
+    text-align: justify;
+    border-left: 4px solid #1070b7;
+    background:#F7FCFC;
+    }
+    
+#textHeraldica p{margin-left:2%;}
+#textHeraldica2 p{margin-left:2%;}
+#logoHeraldica{margin:auto; width:150px; height:auto; padding:10px;}
+	
+    
+@media screen and (max-width:800px){
+    #textHeraldica, #textHeraldica2 {font-size: 9pt; width: 82%; line-height: 10pt; }
+    .contenedorHeraldica h1{font-size: 12pt; color:#000;}
+    #logoHeraldica{width:30%; height:auto; margin:10px 20px 0px 90px; padding:0;}
+    p {font-size: 1pt, text-align:center}
+}
+    
+    
+hr {border: 0,1px solid grey; height: 0; width: 100%;}
+</style>
+
+<div class="contenedorHeraldica">
+
+<h1 style="color:#1070b7;"align="center"><strong>HER&Aacute;LDICA</strong></h1>
+
+<br>
+    
+<div id="textHeraldica">
+    <p align="justify">
+        Fuerzas simbolizadas all&iacute; por igual n&uacute;mero de estrellas de oro. La inscripci&oacute;n romana rememora del 1° de Julio de 1945, fecha de inauguraci&oacute;n del Instituto, aun con la denominaci&oacute;n de Caja de Previsi&oacute;n Social. Timbrado por el sol de la Libertad, el Escudo, se ampara a la sombra de las alas del &aacute;guila como dispensadora de la luz y de la felicidad y coron&aacute;ndose con la flamante y elocuente divisa: BAJO LA SOMBRA DE TUS ALAS, AMP&Aacute;RAME.
+    </p>
+</div>	
+
+<div id="logoHeraldica">
+    <img src="{% static "image/base/minescudoIPSFA-min.png" %}" >
+</div>
+
+<p align="center" style="color:#000"><strong>BAJO LA SOMBRA DE TUS ALAS, AMP&Aacute;RAME</strong></p>
+
+    <br>
+<div id="textHeraldica2">
+    <p align="justify">           
+        No podr&iacute;a ser m&aacute;s hermoso el simbolismo del escudo del Instituto de Previsi&oacute;n Social de Las Fuerzas Armadas. Baluarte de f&eacute;. Se&ntilde;al de optimismo. Recuerdo en la hora de dificultad. Viva fuerza para levantar y animar la marcha hacia la conquista de la recuperaci&oacute;n. Casa hospitalaria y generosa &eacute;ste Instituto de Previsi&oacute;n Social de Las Fuerzas Armadas, establecida como iniciativa feliz a donde se llega pleno de esperanza a recibir el vigoroso est&iacute;mulo de la palabra fraternal para no desmayar y para vencer en los combates de la idealidad y del ensue&ntilde;o patrio. Hogar inmenso, encuentro de hermanos, di&aacute;logo sincero sobre problemas humanos comunes, para encontrar soluciones de aliento espiritual y de presente econ&oacute;mico. El s&iacute;mbolo es acertado, por cuanto los beneficios del Instituto de Previsi&oacute;n Social de Las Fuerzas Armadas, han invadido el &aacute;mbito nacional y el &aacute;guila no se detiene, hoy aqu&iacute; en la capital, ma&ntilde;ana en la provincia, en sus alas transporta reconocimiento al oficial en todas las situaciones digno de consideraci&oacute;n por su servicio leal, honesto y firme. Y grande es su misi&oacute;n de velar en el marco geogr&aacute;fico nacional, por varones enaltecidos por el cumplimiento del deber, hoy llenos de vigor en la Actividad unos, en la Disponibilidad y el Retiro los otros, haciendo reminiscencia en los d&iacute;as del Cuartel en que se fortaleci&oacute; el culto al civismo, en que el sacrifico de muchas horas ciment&oacute; su personalidad a trav&eacute;s de la ense&ntilde;anza cient&iacute;fica todos una misma familia unida por los v&iacute;nculos de luchas decorosas y altivas, dispuestos a seguir inspirando con su ejemplo y su moral a las futuras generaciones. El Instituto de Previsi&oacute;n Social de Las Fuerzas Armadas, es ayuda permanente de bienestar para el Oficial que fue centinela ayer y que hoy est&aacute; presente para las jornadas c&iacute;vicas que procura un avance de vencedores y consolidan la estabilidad de la Rep&uacute;blica en el desarrollo promisor de las relaciones que afianzan el prestigio de pueblos e instituciones. No son ellos disparadores de proyectiles, son mensajeros de ideas, de bondad, de anhelo porque la Patria surja en la obra que hagan todos sus hijos. La protecci&oacute;n que brinda el Instituto de Previsi&oacute;n Social de Las Fuerzas Armadas, tiende en parte a remediar las inmensas necesidades de Oficiales que han librado luchas significadoras y que valoran con las deficiencias que pueda tener, que este Organismo viene cumpliendo la finalidad para que fue creado. En la frase "BAJO LA SOMBRA DE TUS ALAS, AMP&aacute;RAME", hay todo un contenido filos&oacute;fico, amplio y humano. Una finalidad mantenida a trav&eacute;s de los a&ntilde;os que ha dado el resultado de muchas satisfacciones por los beneficios prodigados. Es la realidad de una justicia social esperada por estos servidores y que ma&ntilde;ana derivar &aacute; en mayores bienes. Es el deseo firmemente sentido por el Consejo Directivo y Junta Administradora, de que el Instituto contin&uacute;e derramando los dones que emanan de su expresi&oacute;n figurada que le distingue como manifestaci&oacute;n &uacute;til. El &aacute;guila lleva tranquilidad, pues sus garras no son para herir, sino para proteger. Cuando llega, hay emoci&oacute;n en los hogares porque trae mensaje de felicidad, de comprensi&oacute;n y de aliento. 
+    </p>
+</div>
+    
+<p align="center" style="color:#000">
+    <strong>
+        "SUB UMBRA ALARUM TUARUM PROTEGE ME" 
+        <br>
+        Composici&oacute;n Literaria Original del Sr. Italo Ayester&aacute;n.
+    </strong>
+</p>   
+</div>
+{% endblock institucion %}

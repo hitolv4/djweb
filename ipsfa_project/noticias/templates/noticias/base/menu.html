@@ -198,32 +198,32 @@ function sucursalesF(){
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">IPSFA</a>
+      
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Inicio</a></li>
+        <li class="active"><a href="{% url 'lista_publicaciones'%}">Inicio</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Institución<b class="caret"></b></a> 
           <ul class="dropdown-menu">
             <li class="dropdown dropdown-submenu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aspectos Legales</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Consejo Directivo</a></li>
-                <li><a href="#">Marco Juridico</a></li> 
+                <li><a href="{% url 'lista_publicaciones'%}institucion/aspectos_legales/consejo_directivo">Consejo Directivo</a></li>
+                <li><a href="{% url 'lista_publicaciones'%}institucion/aspectos_legales/marco_juridico">Marco Juridico</a></li> 
               </ul>
             </li>
-          <li><a href="#">Contrataciones Publicas</a></li>
-          <li><a href="#">Efemerides</a></li>
+          <li><a href="{% url 'lista_publicaciones'%}institucion/contrataciones_publicas">Contrataciones Publicas</a></li>
+          <li><a href="{% url 'lista_publicaciones'%}institucion/efemerides">Efemerides</a></li>
           <li><a href="{% url 'lista_publicaciones'%}institucion/galeria_de_expresidentes">Galeria de Ex-Presidentes</a></li>
             <li class="dropdown dropdown-submenu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Organización</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Quienes Somos</a></li>
-                <li><a href="#">Heraldia del Escudo</a></li>
-                <li><a href="#">Himno</a></li>
+                <li><a href="{% url 'lista_publicaciones'%}institucion/organizacion/quienes_somos">Quienes Somos</a></li>
+                <li><a href="{% url 'lista_publicaciones'%}institucion/organizacion/heraldia_del_escudo">Heraldia del Escudo</a></li>
+                <li><a href="{% url 'lista_publicaciones'%}institucion/organizacion/himno">Himno</a></li>
                 <li><a href="{% url 'lista_publicaciones'%}institucion/organizacion/linea_de_mando">Linea de Mando</a></li>
-                <li><a href="#">Plan de Transformacion</a></li> 
+                <li><a href="{% url 'lista_publicaciones'%}institucion/organizacion/plan_de_transformacion">Plan de Transformacion</a></li> 
               </ul>
             <li><a href="{% url 'lista_publicaciones' %}institucion/sucursales">Sucursales</a></li>
             </li>

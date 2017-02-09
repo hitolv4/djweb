@@ -1,0 +1,147 @@
+{% extends "noticias/base/base.html" %}
+
+{% block institucion %}
+    
+<style>
+.contenedorConsejoDirectivo{
+    font-family: montserrat;
+	width:94%;
+	margin-left:1%;
+	margin-top:3%;
+	margin-bottom:3%;
+	max-width:94%;
+	height:60%;
+	padding:16px;
+   	}
+    
+#primera{
+    font-family: montserrat;
+	width:95%;
+	margin-left:2%;
+    color: #000;
+	margin-bottom:3%;
+	height:auto;
+    padding:10px;
+    line-height: 28px;
+    font-size: 12pt;
+    position:relative;
+    text-align: justify;
+    border-left: 4px solid #1070b7;
+    background:#F7FCFC;
+	}
+    
+#segunda{
+    font-family: montserrat;
+	width:95%;
+	margin-left:2%;
+    color: #000;
+	margin-bottom:3%;
+	height:auto;
+    padding:10px;
+    line-height: 28px;
+    font-size: 12pt;
+    position:relative;
+    text-align: justify;
+    border-left: 4px solid #1070b7;
+    background:#F7FCFC;
+ 	}
+    
+#tercera{
+    font-family: montserrat;
+	width:95%;
+	margin-left:2%;
+    color: #000;
+	margin-bottom:3%;
+	height:auto;
+    padding:10px;
+    line-height: 28px;
+    font-size: 12pt;
+    position:relative;
+    text-align: justify;
+    border-left: 4px solid #1070b7;
+    background:#F7FCFC;
+	}
+	
+hr {border: 0,1px solid grey; height: 0; width: 100%;}
+span{display: block; text-align: justify; text-indent: 5%; line-height: 140%;}
+
+@media screen and (max-width:800px){    
+    #primera,#segunda,#tercera   {font-size: 9pt; width: 82%; line-height: 10pt;}
+    .contenedorConsejoDirectivo h1{font-size: 12pt; color:#000;}
+}
+</style>
+
+<div class="contenedorConsejoDirectivo">
+    <h1 style="color:#1070b7;" align= "center";><strong>CONSEJO DIRECTIVO</strong></h1>
+        <br>
+    <div id="primera">
+        <p align="justify">
+            <strong>MISI&Oacute;N</strong>
+            <br>
+            Ejercer la suprema direcci&oacute;n y vigilancia del Instituto.       
+            <br><br>  
+            <strong>ESTRUCTURA</strong>
+            <br>
+            Es un cuerpo colegiado de direcci&oacute;n, depende jer&aacute;rquica y funcionalmente del Ministerio de la Defensa y est&aacute; integrado de la siguiente manera:
+        </p>
+    </div>
+    
+    <div id="segunda">
+        <p align="justify">
+            <strong>PRESIDENTE</strong>            
+            <br>            
+            Ministro del Poder Popular para la Defensa.            
+            <br><br>             
+            <strong>MIEMBROS</strong>
+            <br>            
+            <span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+                Comandante General del Ej&eacute;rcito.
+            </span>
+            <span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+                Comandante General de la Armada. 
+            </span>
+            <span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+                Comandante General de la Aviaci&oacute;n.
+            </span>
+            <span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+                Comandante General de la Guardia Nacional. 
+            </span>
+            <span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+                Contralor General de la Fuerza Armada Nacional. 
+            </span>
+            <span style="display: list-item; margin-left: 2em; text-indent: 0%;">
+                Consultor Jur&iacute;dico del Ministerio del Poder Popular para la Defensa. 
+            </span>
+            <br>
+            <strong>SECRETAR&Iacute;A</strong>  
+            <span style="display: list-item; margin-left: 2em; text-indent: 0%;">     
+                Presidente de la Junta Administradora del IPSFA.
+            </span>
+        
+           </p>
+    </div>  
+      
+    <div id="tercera">
+        <p align="justify">
+            <strong>FUNCIONES</strong>        
+            <ul style="padding:0 0 0 30px;">
+                <li>Celebrar reuniones ordinarias y extraordinarias necesarias para considerar los Informes, Memorias y Cuentas presentadas por la Junta Administradora, as&iacute; como cualquier otro asunto de la misma &iacute;ndole, que sea necesario tratar a este nivel.</li>
+                <li>Supervisar y controlar el patrimonio del IPSFA, por intermedio de los &oacute;rganos creados a tal efecto.</li>
+                <li>Aprobar o improbar los Informes sobre la gesti&oacute;n Econ&oacute;mica-Financiera del IPSFA. </li>
+                <li>Conocer y aprobar seg&uacute;n el caso, los distintos reglamentos, pol&iacute;ticas o cualquier otra norma necesaria, para la debida aplicaci&oacute;n del Estatuto Org&aacute;nico. </li>
+                <li>Autorizar el establecimiento de Dependencias en cualquier lugar del pa&iacute;s.</li> 
+                <li>Aprobar o improbar los Informes del Plan Anual Socio-Econ&oacute;mico y Financiero del IPSFA. </li>
+                <li>Aprobar los Reglamentos de Operaciones o cualquier otro necesario, para la debida aplicaci&oacute;n del Estatuto Org&aacute;nico.</li> 
+                <li>Aprobar o improbar las reformas estructurales en la organizaci&oacute;n del IPSFA, que se propongan a trav&eacute;s del Presidente de la Junta Administradora.</li> 
+            </ul>
+        </p>
+    
+            <br>
+        
+    <span>
+        En casos de urgencia el Ministro del Poder Popular para la Defensa podr&aacute; convocar el Consejo Directivo a sesiones extraordinarias.          
+    </span>
+    </div> 
+</div>
+
+{% endblock institucion %}

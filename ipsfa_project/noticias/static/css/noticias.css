@@ -115,11 +115,26 @@ box-shadow: 5px 5px 5px rgba(0,0,0,.3);
         color: #828282;
         width: 100%;
     }
+
+.navbar {
+
+    margin-bottom: 3px;
+
+}
+
+.dropdown-menu{
+    padding: 1px 0;
+    background-color: rgba(255,255,255,.15);
+}
+
+
 main li a {
     color:#000000;
-    font-size: 15px;
+    font-size: 14px;
     font-family: Monserat; 
 }
+
+
 
 .post img {
     height: 60%;

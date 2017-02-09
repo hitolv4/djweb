@@ -2,13 +2,13 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import (Nota, UltimaHora, YoutubeSlide, Slider, CarouselNota,
-                     GaleriaExpresidentes, LineaDeMando, Sucursal, Gerencia, Beneficio)
+                     GaleriaExpresidentes, LineaDeMando, Sucursal, Gerencia, Beneficio, ContratacionesPublicas, Efemerides)
 
 
 def lista_publicaciones(request):
     # Noticias
     posts = Nota.objects.filter(
-        fecha_publicacion__lte=timezone.now()).order_by('-fecha_publicacion')
+        fecha_publicacion__lte=timezone.now()).order_by('-fecha_publicacion',)[:5]
     # Ultima Hora
     uhs = UltimaHora.objects.filter(
         fecha_publicacion__lte=timezone.now()).order_by('-fecha_publicacion')
@@ -24,7 +24,7 @@ def lista_publicaciones(request):
 def detalle(request, pk):
     post = get_object_or_404(Nota, pk=pk)
     notaimgs = CarouselNota.objects.filter(
-        fecha_publicacion__lte=timezone.now()).order_by('fecha_publicacion')
+        fecha_publicacion__lte=timezone.now(), nota=pk).order_by('fecha_publicacion')
     return render(request, 'noticias/detalle.html', {'post': post, 'notaimgs': notaimgs})
 
 
@@ -81,6 +81,23 @@ def detalle3(request, pk):
     return render(request, 'noticias/detalle3.html', {'bene': bene})
 
 
+def contratacionespublicas(request):
+    cont = ContratacionesPublicas.objects.filter(
+        fecha_publicacion__lte=timezone.now()).order_by('-fecha')
+    return render(request, 'noticias/institucion/contratacionespublicas.html',
+                  {'cont': cont})
+
+
+def efemerides(request):
+    efe = Efemerides.objects.filter(
+        fecha_publicacion__lte=timezone.now()).order_by('fecha')
+    return render(request, 'noticias/institucion/efemerides.html',
+                  {'efe': efe})
+
+
+# statico beneficios
+
+
 def bbienestar(request):
     return render(request, 'noticias/benebienestar.html')
 
@@ -101,4 +118,27 @@ def binversora(request):
     return render(request, 'noticias/binversora.html')
 
 
+# statico institucion
 
+def consejodirectivo(request):
+    return render(request, 'noticias/institucion/aspectoslegales/consejodirectivo.html')
+
+
+def marcojuridico(request):
+    return render(request, 'noticias/institucion/aspectoslegales/marcojuridico.html')
+
+
+def quienessomos(request):
+    return render(request, 'noticias/institucion/organizacion/quienessomos.html')
+
+
+def heraldiaescudo(request):
+    return render(request, 'noticias/institucion/organizacion/heraldia.html')
+
+
+def himno(request):
+    return render(request, 'noticias/institucion/organizacion/himno.html')
+
+
+def plant(request):
+    return render(request, 'noticias/institucion/organizacion/plant.html')

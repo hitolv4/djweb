@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import (Nota, UltimaHora, YoutubeSlide,
                      Slider, CarouselNota, GaleriaExpresidentes,
-                     LineaDeMando, Militar, Componente, Rango, Sucursal, Gerencia, Beneficio, BeneficioDocumento)
+                     LineaDeMando, Militar, Componente, Rango, Sucursal, Gerencia, Beneficio, BeneficioDocumento, ContratacionesPublicas, Efemerides)
 
 # Register your models here.
 
@@ -23,19 +23,20 @@ class NotaAdmin(admin.ModelAdmin):
 
 # Admin de Beneficio
 
-
+"""
 class DocumentosInline(admin.StackedInline):
     model = BeneficioDocumento
     extra = 1
     
 
-"""class BeneficioAdmin(admin.ModelAdmin):
+class BeneficioAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Datos', {'fields': ['autor', 'dependencia', 'beneficio', 
                               'texto', 'fecha_creacion', 'fecha_publicacion']})
     ]
     inlines = [DocumentosInline]
 """
+
 
 admin.site.register(Nota, NotaAdmin)
 
@@ -55,9 +56,12 @@ admin.site.register(Sucursal)
 
 admin.site.register(Gerencia)
 
+admin.site.register(ContratacionesPublicas)
+
+admin.site.register(Efemerides)
+
 # habilita admin para componente y rangos
-admin.site.register(Componente)
+# admin.site.register(Componente)
+# admin.site.register(Rango)
 
-admin.site.register(Rango)
-
-#admin.site.register(Beneficio, BeneficioAdmin)
+# admin.site.register(Beneficio, BeneficioAdmin)

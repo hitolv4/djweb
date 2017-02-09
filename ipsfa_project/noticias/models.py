@@ -29,7 +29,6 @@ class Nota (models.Model):
 class CarouselNota (models.Model):
     autor = models.ForeignKey('auth.User')
     nota = models.ForeignKey(Nota, on_delete=models.CASCADE)
-    titulo = models.CharField(max_length=250)
     imagen = models.ImageField(upload_to='carouselnota',)
     fecha_creacion = models.DateTimeField(default=timezone.now)
     fecha_publicacion = models.DateTimeField(blank=True, null=True)
@@ -141,6 +140,7 @@ class Componente(models.Model):
 
 class Rango(models.Model):
     OP_RANGO = (
+        ('*', ''),
         ('G/F.', 'General en Jefe'),
         ('G/D.', 'General de Divicion'),
         ('G/B.', 'General de Brigada'),
@@ -162,6 +162,8 @@ class Rango(models.Model):
 
     componente = models.ForeignKey(Componente)
     rango = models.CharField(
+        blank=True,
+        null=True,
         max_length=6,
         choices=OP_RANGO
     )
@@ -299,7 +301,6 @@ class Beneficio(models.Model):
         return self.dependencia
 
 
-
 class BeneficioDocumento(models.Model):
     autor = models.ForeignKey('auth.User')
     beneficio = models.ForeignKey(Beneficio, on_delete=models.CASCADE)
@@ -310,3 +311,35 @@ class BeneficioDocumento(models.Model):
     class Meta:
         verbose_name = 'Documento'
         verbose_name_plural = 'Documento'
+
+
+class ContratacionesPublicas (models.Model):
+    autor = models.ForeignKey('auth.User')
+    fecha = models.DateField(default=timezone.now)
+    titulo = models.CharField(max_length=250)
+    descripcion = models.TextField()
+    documento = models.FileField(upload_to='contrataciones')
+    fecha_creacion = models.DateTimeField(default=timezone.now)
+    fecha_publicacion = models.DateTimeField(blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Contrataciones Publicas'
+        verbose_name_plural = 'Contrataciones Publicas'
+
+    def __str__(self):
+        return self.titulo
+
+
+class Efemerides (models.Model):
+    autor = models.ForeignKey('auth.User')
+    fecha = models.DateField(default=timezone.now)
+    titulo = models.CharField(max_length=250)
+    fecha_creacion = models.DateTimeField(default=timezone.now)
+    fecha_publicacion = models.DateTimeField(blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Efemerides'
+        verbose_name_plural = 'Efemerides'
+
+    def __str__(self):
+        return self.titulo

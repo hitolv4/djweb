@@ -28,9 +28,17 @@
                 <div class="col-md-8">
                 <div class="txtge">
                     <strong style="color: #1070BA; font-size: 16px;">{{gerencia.gerencia}}</strong>
+                    {% if gerencia.gerente.nombre == "N/A" %}
                     <br>
-                    {{ gerencia.gerente.rango}} {{gerencia.gerente}} 
+                    
+                    {{gerencia.gerente}} 
+                    <br>                        
+                    {% else %}
                     <br>
+                    
+                    {{ gerencia.gerente.rango}} {{gerencia.gerente}}
+                    <br>
+                    {% endif %}
                     <strong>Correo Instirucional: </strong>{{gerencia.correo}}
                     <br>
                     <strong>Teléfono de Contacto: </strong>{{gerencia.telefono}}

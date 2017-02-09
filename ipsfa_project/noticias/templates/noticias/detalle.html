@@ -6,7 +6,7 @@
 
 			<!--<div class="date">{{ post.fecha_publicacion }}</div>-->
 		
-		<h1><b>{{ post.titulo }}</b></h1>
+		<h1><b>{{ post.titulo | upper }}</b></h1>
 		<!--template url apunta a la carpeta media -->
 		<img src="{% url 'lista_publicaciones'%}media/{{ post.portada }}"/>
 		<p> {{ post.fecha_publicacion }} </p>
@@ -32,11 +32,12 @@
                 <figure>
                     <img src="{% url 'lista_publicaciones'%}media/{{ notaimg.imagen }}" />
                     <figcaption class="img-caption">
-                        {{ notaimg.titulo }}
+                        {{ notaimg.nota}}
                     </figcaption>
                 </figure>
                 </a>
             </li>
+
             {% endfor %}
         </ul>
 
