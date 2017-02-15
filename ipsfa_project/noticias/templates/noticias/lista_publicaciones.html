@@ -3,12 +3,12 @@
 
 
 <!-- Pagina principal -->
-<!--IPSFA en Linea -->
+<!--IPSFA en Linea http://192.168.12.171//ipsfa.net/accounts.ipsfa.linea/accounts?resf=ini-acc http://201.242.202.212/pagipsfa/registro_viv/control/controlcSeg.php-->
 {% block ilinea %}
 <div id="particles-js"></div>
 <div class="ipsfa-net">  
     <div class="ingresa">
-        <a href='http://www.ipsfa.mil.ve/ipsfa.net/accounts.ipsfa.linea/accounts?resf=ini-acc' target="_blank" style="color:#ffffff">
+        <a href='http://192.168.12.171//ipsfa.net/accounts.ipsfa.linea/accounts?resf=ini-acc' target="_blank" style="color:#ffffff">
             <p align="center" style="font-size:12px;"><strong>INGRESA</strong></p> 
         </a>
     </div>
@@ -60,7 +60,17 @@
  <ul>
 	{% for post in posts %}
   <div class="post">
-    <li><b><a href="{% url 'detalle' pk=post.pk %}">{{ post.titulo | truncatewords:5 | title }}</a></b></li>
+    <li><b><a href="{% url 'detalle' pk=post.pk %}">
+    {% if post.titulo|truncatewords:5|length <= 36 %}   
+    	{{ post.titulo|truncatewords:6 |title }}
+    {% elif post.titulo|truncatewords:5|length <= 38 %}
+    	{{ post.titulo|truncatewords:5 |title }}
+    {% else %}
+    {{ post.titulo|truncatewords:4 |title }}
+    {% endif %}
+
+
+    </a></b></li>
   </div>
  {% endfor %}
  </ul>

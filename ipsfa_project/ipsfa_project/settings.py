@@ -26,7 +26,7 @@ SECRET_KEY = '-x8gic#dey(*+4)7b(d$dq#5=_!ux)5y!48jz8))kbnk@1f1mq'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'hitolv4.pythonanywhere.com',
+    '192.168.6.105',
     '127.0.0.1',
 ]
 
